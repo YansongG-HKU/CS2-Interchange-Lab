@@ -54,3 +54,11 @@ https://mods.paradoxplaza.com/mods/133736/Windows
 
 
 核查：2026-10-25 UTC。官方早期功能介绍不等于当前版本全部数值约束；作者文档不等于本仓游戏测试。
+
+## 第一阶段扩展调研 / Phase 1 research
+
+- [几何与工程方法（非游戏硬规范）](research/geometry.md)
+- [社区需求线索（未在本项目复现）](research/community.md)
+- [Placemaker与交互研究](research/ux.md)
+
+核查日期2026-10-25 UTC。社区帖子只支持需求/故障情境，不支持通用引擎因果；当前无法读取的来源或未锁版本应保留限制。

@@ -19,3 +19,6 @@
 
 ## 完成定义
 准备资料完成不等于资产完成；离线几何检查不等于网络测试；兼容一组版本不等于所有版本兼容；GitHub 提交不等于 Paradox Mods 已发布。
+
+## 需求变更同步
+设计变更必须同步 DESIGN_REQUIREMENTS、GEOMETRY_AND_LANES、UX_AND_I18N、REQUIREMENTS_ACCEPTANCE；中英文语义和状态一致。资料证据等级及未实现边界不得丢失。
