@@ -24,3 +24,10 @@
 ## 状态枚举
 NOT_TESTED / IN_PROGRESS / PASS / FAIL / BLOCKED / NEEDS_RETEST。
 PASS 必须绑定确切版本组合及证据；版本改变后默认 NEEDS_RETEST。准备文档检查通过不能把任何兼容矩阵行改为 PASS。
+
+## 设计验收补充
+执行 [需求验收场景](REQUIREMENTS_ACCEPTANCE.md) 前先冻结支持域、容差和版本；全部Case目前NOT_RUN。双语、过期预览拒绝、节点重映射与Mod外部编辑是同等门禁。
+
+新增A24–A31运行与现实感场景；采用相同存档副本/需求/观察窗口，若无法控制需求或统计失败出行，明确标观察性及缺测，不作容量证明。
+
+新增A32–A40核验曲线/地块/堆叠/面积口径与候选公平比较；未冻结容差、基线和分析边界时不得PASS。仍全部NOT_RUN。

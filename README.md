@@ -40,3 +40,18 @@
 准备工作在云端进行；未经用户明确授权不得操作用户电脑、付费开机、安装未知工具或扩大账户权限。发布游戏资产需另行确认目标、版本和依赖；公开 GitHub 仓库不等于已发布游戏 Mod。
 
 本仓库不附带游戏文件、第三方 Mod 二进制、账号凭据或未经许可的素材。当前尚未选择开源许可证；公开可见不意味着授予任意再分发许可，详见 [权利说明](RIGHTS.md)。非官方项目，与 Colossal Order、Paradox Interactive 及各 Mod 作者无隶属关系。
+
+## 第一阶段设计需求 / Phase 1 design
+
+当前需求草案覆盖逐车道6→4+2、非正交曲线衔接、全/部分互通、预览与可逆编辑、Mod失效管理，以及首阶段中英体验；尚未实现。 / Draft requirements cover lane-level splits, curved attachments, access completeness, safe previews, mod invalidation and Chinese/English UX. No runtime implementation exists.
+
+- [中英需求 / Requirements](docs/DESIGN_REQUIREMENTS.md)
+- [曲线与车道契约 / Geometry and lanes](docs/GEOMETRY_AND_LANES.md)
+- [交互与双语 / UX and i18n](docs/UX_AND_I18N.md)
+- [验收场景 / Acceptance scenarios](docs/REQUIREMENTS_ACCEPTANCE.md)
+
+研究参考暂定 CS2 Placemaker；借鉴“意图—预览—确认”而非宣称其已有立交求解能力。详细证据与社区线索见 [sources](docs/SOURCES.md)。
+
+新增 [现实感与游戏实际 / Realism and gameplay](docs/REALISM_AND_GAMEPLAY.md)：服务/系统型、主线连续、回堵、集散、桥梁全包络及交通评价；不把现实工程参考当游戏硬规则。 / Design-only requirements; no runtime validation.
+
+核心扩展：[两曲线与场地占用 / Curved site optimization](docs/CURVED_SITE_OPTIMIZATION.md)。城区紧凑、郊区展开少堆叠是可编辑偏好，与硬面积/高度/层数/禁建边界分开；不牺牲车道或流向来偷偷凑方案。 / Editable preferences never silently relax movement or site constraints.
