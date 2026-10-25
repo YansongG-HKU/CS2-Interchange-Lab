@@ -1,5 +1,7 @@
 # 测试与验收
 
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 新增游戏外计算/浏览器实测；本文游戏测试仍 NOT_RUN。 / Offline computation/browser tests now exist; game tests here remain NOT_RUN. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
 当前没有任何游戏实测记录；以下是测试计划，不是通过清单。
 
 ## 必填环境

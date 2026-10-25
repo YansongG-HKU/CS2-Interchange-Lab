@@ -1,6 +1,8 @@
 # 第一阶段设计需求 / Phase 1 Design Requirements
 
-状态 / Status: **DRAFT — requirements only; not implemented or game-tested.**
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 有限游戏外二维子集已经实现，完整一期与游戏门禁尚未通过。 / A bounded offline 2D subset is implemented; full phase/game gates are not accepted. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
+状态 / Status: **DRAFT — full requirements; bounded offline subset implemented separately; not game-tested.**
 
 本阶段是业余研究项目的需求基线，不是承诺完成全自动立交生成器。中文与英文从首阶段并列支持。 / This is a hobby research requirements baseline, not a claim of a working automatic interchange generator. Chinese and English are first-phase requirements.
 

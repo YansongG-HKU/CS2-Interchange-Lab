@@ -1,0 +1,27 @@
+{
+  "algorithm": "offline-0.1.0",
+  "sha256": {
+    "examples/curved-skew.json": "437fd16d72dcc5bf8c0be8f5a6d6de9c2136b8c8c19124bf81a5e8bc7892c6b3",
+    "examples/exclusion.json": "89d8df8b966c25e7c46a82dbb7217caa929126950eacbdeb6409d4a558a9774a",
+    "examples/invalid.json": "c25176d7685ee2b9a46d435899633e276bd1a29b1d334a88f7564ede0f7b1171",
+    "examples/multiple.json": "81a0cec63dca01214c2f5e260330e3fbcebbdc2abf5e6a068aa29f51b16051f5",
+    "examples/near-tangent.json": "758a9574a94284ba6cd06c27ec05bd331ac9a0c33e31774d16bc20cf13e4dd24",
+    "examples/partial.json": "b2010196f6d9fd2e318172f9ab437c5527b18fcba0114ad82928294cca252e89",
+    "examples/small-site.json": "f5b87c9c10ba886709b8f8f59db7693dfe12f714d5e416bef479f464ba4d7bbf",
+    "index.html": "af351bdcc94c835f913a9ddfaea6475f82d22c1e2e692dd16440a48079a9b952",
+    "package-lock.json": "64ff6c25898909729e1a49de4f7d4f3abd627c91386ef5b72d731998c70ce92b",
+    "package.json": "2cbb4addfdc07f79d5ac39aca9797f6d807a640408dc192cbd6fa078a814b243",
+    "scripts/copy-examples.js": "a33cb6414c8220f44fc9ef3267a9941952c07df77c59b62254862f94200f9f91",
+    "src/adapters/game.js": "369880af10b1efecf7a0a2c56e4dbe7a1eed57a77b05b0b381ee6a82f531f27e",
+    "src/core/area.js": "c8b35d063552891269fc7e1876356eb67b4b387a2c1467b2bf7e076458f12cb2",
+    "src/core/geometry.js": "929249c0356c319410f5ad6b60609e889e65d3c3dd3500280830c6fa994d22fa",
+    "src/core/model.js": "7673729a8258d21bdf788f2fa614cd2e6ccf7b5340c5d0ca68292e5ec0dec9ee",
+    "src/core/solver.js": "b365da3d37808e725d7db8626517e021ee21ef9d6aad3d1255d95bc11abdc0e5",
+    "src/i18n.js": "74c0c03978bebae060ec916e8e50b741b586b09aad7f82e9dda381431a3e0cec",
+    "src/style.css": "60316a11b2d40ca6a30682a0ce3dee18d8b4eca332288e90d5d3c0775689d258",
+    "src/ui.js": "e3485f9cbe84bf265e5669316231689adc75b2bbdd79f053363e3849afb07fac",
+    "tests/browser.js": "24ecc830a4f48ce22f198eeffaa00e8b9483060d907c308d8c63da7b84529139",
+    "tests/core.test.js": "ebf2476cbd3e9e0a394399f4f6631e29448a5e21b3c303fe57700b74dc60b80e",
+    "tests/evidence.js": "406dc1b2d1815ba391aa23ba1e9c344d9ed0242b631fd46e2a2dcea4c95fc866"
+  }
+}

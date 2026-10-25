@@ -1,5 +1,7 @@
 # 来源与证据
 
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 本轮新实现的算法、数值和支持域为项目实验定义，不来自游戏实测。polygon-clipping 使用 npm 锁定版本和许可证；不复制历史研究来源代码或素材。 / New numerical settings are project experiments, not game evidence. Dependencies and licenses are explicitly recorded. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
 
 ### S1 官方 Road Tools（2023 年功能介绍，历史设计说明）
 

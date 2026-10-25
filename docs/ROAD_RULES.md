@@ -1,5 +1,7 @@
 # 道路、节点与立交规则研究
 
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 离线新增规则、容差、面积口径及支持域见 Demo 文档；不是 CS2 或现实道路硬规则。 / Offline numerical rules are experimental, not engine or engineering limits. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
 以下为学习和验收框架，不是已掌握全部游戏规则，也不是实际道路设计规范。
 
 

@@ -54,3 +54,29 @@
 新增CURVED_SITE_OPTIMIZATION、research/land_optimization和land_controls；更新README、DESIGN_REQUIREMENTS、GEOMETRY_AND_LANES、UX_AND_I18N、REALISM_AND_GAMEPLAY、ROAD_RULES、VALIDATION、REQUIREMENTS_ACCEPTANCE、ROADMAP、EXPERIMENT_TEMPLATE、DEVELOPMENT、PR模板、SOURCES、CHANGELOG及本索引。
 
 全部其余文档已核对无需修改：AGENTS/CONTRIBUTING通用一致性规则仍适用，RIGHTS无新代码资产授权，COMPATIBILITY无新依赖/通过结论，Issue模板已有需求/证据字段，之前5份research保存历史来源不追改，.gitignore无新增输出类型。核心需求数学审查修正完整预留集合、差集/净值、分母和越界、局部层数及搜索状态；内部链接检查，全部运行场景仍NOT_RUN。
+
+## 2026-10-25 UTC — 离线实现变更影响 / Offline implementation impact
+
+新增索引 / New entries:
+- [OFFLINE_DEMO](OFFLINE_DEMO.md): architecture, run, frozen domain, approximation and rollback.
+- [OFFLINE_VALIDATION](OFFLINE_VALIDATION.md): evidence, partial acceptance mapping, unrun game/CI checks.
+- [THIRD_PARTY](THIRD_PARTY.md): dependency versions/licenses and runtime notices.
+- [Evidence source manifest](../evidence/source-manifest.json), [computation](../evidence/computation.json), [browser](../evidence/browser.json).
+
+全面逐文件复核 / Full tracked-document review:
+
+| Files | Disposition and reason / 处置及理由 |
+|---|---|
+| README.md, CHANGELOG.md, CONTRIBUTING.md | Updated: runnable subset, commands, actual evidence and limits / 可运行状态与验证 |
+| RIGHTS.md | Updated: third-party npm licenses, project rights unchanged / 依赖许可分开 |
+| docs/DESIGN_REQUIREMENTS.md, GEOMETRY_AND_LANES.md, UX_AND_I18N.md, CURVED_SITE_OPTIMIZATION.md | Updated: full design vs limited implemented subset, link current contracts / 完整目标不冒充完成 |
+| docs/REQUIREMENTS_ACCEPTANCE.md, VALIDATION.md, EXPERIMENT_TEMPLATE.md | Updated: executed offline subcases vs NOT_RUN game cases / 测试分层 |
+| docs/DEVELOPMENT.md, ROADMAP.md, ROAD_RULES.md | Updated: toolchain, P0.5 and experimental numerical rules / 工具链与阶段 |
+| docs/COMPATIBILITY.md, REALISM_AND_GAMEPLAY.md, SOURCES.md | Updated: runtime libraries do not imply game compatibility; experimental definitions / 边界及来源 |
+| docs/DOCUMENTATION_INDEX.md | Updated: new files and complete impact record / 全仓索引 |
+| AGENTS.md | No change: execution/documentation/review restrictions still apply / 规则不变 |
+| .github/pull_request_template.md, .github/ISSUE_TEMPLATE/experiment.md | No change: existing fields already cover evidence, versions, unrun items, rollback and scope / 模板可覆盖本次 |
+| docs/research/geometry.md, community.md, ux.md, realism_addendum.md, game_pitfalls.md, land_optimization.md, land_controls.md | No change: dated research records and proposals, not current implementation status; preserve historical evidence / 保留历史研究，不重写来源 |
+| .gitignore | Updated: exclude generated dist; no game/private data added / 构建产物忽略 |
+
+New source/tests/examples and three new docs reviewed for matching version/schema, dependency rights, no secrets/game assets and accurate partial support. No .agents/skills exists in this checkout or readable workspace .agents directory. Existing unrelated workspace repositories were not modified. / 不修改其他仓库。

@@ -4,7 +4,7 @@
 
 ## 当前阶段
 
-- 已建立研究范围、开发规则、兼容性矩阵和验证模板。
+- 已建立研究范围、开发规则、兼容性矩阵、验证模板及有限支持域的游戏外二维 Demo。
 - **尚无已验收立交、游戏内测试结果或 Paradox Mods 发布版本。**
 - Road Builder、Anarchy 等是兼容目标，不是已经测试通过的承诺。
 - 不把静态桥梁网格当作可通车道路，不将无碰撞摆放当作车道连接或寻路成功。
@@ -43,7 +43,7 @@
 
 ## 第一阶段设计需求 / Phase 1 design
 
-当前需求草案覆盖逐车道6→4+2、非正交曲线衔接、全/部分互通、预览与可逆编辑、Mod失效管理，以及首阶段中英体验；尚未实现。 / Draft requirements cover lane-level splits, curved attachments, access completeness, safe previews, mod invalidation and Chinese/English UX. No runtime implementation exists.
+需求仍是完整目标；现有游戏外二维 Demo 只覆盖有限子集，详见支持域与未完成项。 / Requirements remain the full target; a bounded offline 2D demo now implements a subset. Game/Mod functionality remains unimplemented.
 
 - [中英需求 / Requirements](docs/DESIGN_REQUIREMENTS.md)
 - [曲线与车道契约 / Geometry and lanes](docs/GEOMETRY_AND_LANES.md)
@@ -55,3 +55,18 @@
 新增 [现实感与游戏实际 / Realism and gameplay](docs/REALISM_AND_GAMEPLAY.md)：服务/系统型、主线连续、回堵、集散、桥梁全包络及交通评价；不把现实工程参考当游戏硬规则。 / Design-only requirements; no runtime validation.
 
 核心扩展：[两曲线与场地占用 / Curved site optimization](docs/CURVED_SITE_OPTIMIZATION.md)。城区紧凑、郊区展开少堆叠是可编辑偏好，与硬面积/高度/层数/禁建边界分开；不牺牲车道或流向来偷偷凑方案。 / Editable preferences never silently relax movement or site constraints.
+
+## 可运行 Demo / Runnable demo
+
+[运行、架构、支持域及误差 / Runtime, architecture and limits](docs/OFFLINE_DEMO.md) · [测试证据 / Test evidence](docs/OFFLINE_VALIDATION.md) · [依赖许可 / Dependency licenses](docs/THIRD_PARTY.md)
+
+```sh
+npm ci --ignore-scripts --cache /tmp/cs2-npm
+npm run dev -- --port 4173
+npm test
+# With the server running and Chromium at /usr/bin/chromium:
+npm run test:browser
+npm run build
+```
+
+打开本机 `http://127.0.0.1:4173`。可以改参数、选交会、检查真实计算、切换中英和导入导出 JSON。默认 full 案例有紧转向风险；partial 案例二维检查无已知冲突仍为 UNKNOWN。三维、完整结构面积、游戏路径与兼容性均未验证。 / Open the loopback URL on the same machine. Edit, select crossings, inspect computed candidates, switch locale, import/export JSON. Full fixture exposes tight-turn failures; partial remains UNKNOWN pending structural/game checks. No public preview deployment or game release.

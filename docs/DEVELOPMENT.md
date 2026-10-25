@@ -1,5 +1,7 @@
 # 开发与提交纪律
 
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 工具链为 Node 24、纯 ES modules、Vite、polygon-clipping、Node test 与 Playwright；复现命令及支持域见 Demo 文档。 / Use the documented local tests/build; preserve requirements branch as PR base. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
 ## 全仓文档一致性
 每次开发开始和每次提交前全面核对文档目录及新增文件。按 docs/DOCUMENTATION_INDEX.md 分类检查全部文档，并记录“已更新”或“无需修改及理由”。包括 README、AGENTS、贡献约定、道路规则、兼容矩阵、测试、路线图、来源、实验记录、变更记录、模板及未来新文档。
 

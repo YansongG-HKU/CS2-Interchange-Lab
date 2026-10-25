@@ -1,5 +1,7 @@
 # 曲线、车道与互通契约 / Geometry, Lane and Movement Contract
 
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 已有纯计算几何、局部六车道实验及独立端口 OD 图；不是完整游戏车道图。 / Pure geometry, separate local six-lane experiment and port OD graph exist; no game lane graph. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
 状态：设计规范草案，非游戏API或求解器实现。 / Draft contract, not an API or solver implementation.
 
 ## 输入模型 / Input model

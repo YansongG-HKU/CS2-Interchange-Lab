@@ -1,6 +1,8 @@
 # 需求验收场景 / Requirements Acceptance Scenarios
 
-全部状态 NOT_RUN：需求规定，不是已通过测试。 / All cases NOT_RUN; specified, not executed.
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 本文 A01–A40 仍是完整需求验收目标，游戏项全部 NOT_RUN；已执行的有限离线子项单独记录，不升级为整项 PASS。 / Full A cases remain requirements; offline subcases are recorded separately, not full acceptance. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
+全部完整验收项尚未通过；有限离线子项见证据，游戏项 NOT_RUN。 / Full cases not accepted; offline subcases have separate evidence; game cases NOT_RUN.
 
 |Case|场景 / Scenario|期望 / Expected|
 |---|---|---|

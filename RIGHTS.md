@@ -5,3 +5,5 @@
 只链接第三方资料和 Mod 官方页面，不拷贝其二进制、受限模型、游戏安装文件、付费内容或未经许可的图片。每项外来代码/资产需记录作者、来源、许可证及使用范围；许可证不清楚则不入库。
 
 Cities: Skylines II 及相关名称属于其各自权利人。本项目非官方，不代表任何 Mod 作者保证兼容，也不是可用于真实公路设计或安全评估的工程标准。
+
+离线 Demo 使用的 npm 依赖另遵循各自许可证，详见 [第三方声明](docs/THIRD_PARTY.md)。项目自身尚未选择许可证的状态不变；未引入游戏/Mod 二进制或外部素材。 / Dependencies retain their own licenses; project licensing remains unchanged.

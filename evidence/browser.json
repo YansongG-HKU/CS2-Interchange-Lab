@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-25T20:04:41.168Z",
+  "sourceCommit": "bfccebe7467b2a8935306910b7763957ec98c207",
+  "workingTree": "implementation under test; final source hash in manifest",
+  "browser": "154.0.8037.57",
+  "checks": [
+    {
+      "name": "default nonorthogonal full baseline",
+      "expected": 12,
+      "actual": 12
+    },
+    {
+      "name": "computed SVG",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "language leaves geometry/model byte-identical",
+      "expected": "deep equality asserted",
+      "actual": "deep equality passed"
+    },
+    {
+      "name": "English title",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "partial status",
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN"
+    },
+    {
+      "name": "partial mode",
+      "expected": "partial",
+      "actual": "partial"
+    },
+    {
+      "name": "fractional numeric parameter",
+      "expected": 92.5,
+      "actual": 92.5
+    },
+    {
+      "name": "undo restores anchor",
+      "expected": 80,
+      "actual": 80
+    },
+    {
+      "name": "suburban selected longer anchor",
+      "expected": "d1.2",
+      "actual": "d1.2"
+    },
+    {
+      "name": "export import restores input and exact result",
+      "expected": "deep equality asserted",
+      "actual": "deep equality passed"
+    },
+    {
+      "name": "tiny area fails",
+      "expected": "NO_CANDIDATE_FOUND",
+      "actual": "NO_CANDIDATE_FOUND"
+    },
+    {
+      "name": "error targets cap",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "diagnostic map marker",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "name": "three selectable intersections",
+      "expected": 3,
+      "actual": 3
+    },
+    {
+      "name": "second intersection explicit selection",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "name": "near tangent rejection",
+      "expected": "UNSUPPORTED",
+      "actual": "UNSUPPORTED"
+    },
+    {
+      "name": "overflow diagnostic",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "malformed JSON actionable message",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "wrong JSON shape rejected without crash",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "empty numeric input is not coerced to zero",
+      "expected": "INPUT_INVALID",
+      "actual": "INPUT_INVALID"
+    },
+    {
+      "name": "recover from invalid input",
+      "expected": 80,
+      "actual": 80
+    },
+    {
+      "name": "mobile no horizontal overflow",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "browser console uncaught errors",
+      "expected": "deep equality asserted",
+      "actual": "deep equality passed"
+    }
+  ],
+  "screenshots": [
+    "browser-zh.png",
+    "browser-overflow-en.png",
+    "browser-mobile-en.png"
+  ]
+}

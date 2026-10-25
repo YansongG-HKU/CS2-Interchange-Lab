@@ -1,6 +1,8 @@
 # 可视化与双语体验 / Visualization and Bilingual UX
 
-状态：需求与交互设计，尚无可用UI。 / Requirements only; no implemented UI.
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 已有中英浏览器二维 UI、诊断定位、参数及 JSON 输入和输入撤销；拖拽/三维/单位切换/游戏 Apply 未实现。 / Bilingual 2D browser UI exists; dragging, 3D, unit switching and game Apply remain deferred. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
+状态：完整交互目标；离线子集已实现，游戏 UI 未实现。 / Full interaction target; offline subset implemented, game UI unimplemented.
 
 ## 参考哲学 / Reference philosophy
 

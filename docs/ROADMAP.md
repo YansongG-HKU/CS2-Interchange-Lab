@@ -1,5 +1,7 @@
 # 路线图
 
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 新增 P0.5：有限二维离线 Demo 已实现并留测试证据，下一步先改善曲线/完整车道包络，再做独立游戏 API 验证；不跳过 P1–P5 游戏门禁。 / P0.5 offline demo implemented; improve curve/lane envelopes then independently validate game APIs. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
 定位：非主业、业余爱好，不设商业里程碑、收入目标或固定工期。
 
 |阶段|内容|当前状态|退出条件|

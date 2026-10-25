@@ -1,6 +1,8 @@
 # 两曲线与场地占用核心需求 / Curved Corridors and Site Optimization
 
-状态：**需求与数学设计草案，未实现、未运行求解或游戏实验。** / Draft only; no solver or game validation.
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 二维子集使用采样路面并差集与侧向预留，完整 P/G/R 及三维仍 UNKNOWN。 / Offline subset uses sampled pavement set operations; complete envelopes remain UNKNOWN. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
+状态：**完整需求与数学设计草案；有限离线子集另见上方，游戏实验未运行。** / Full design target; bounded offline subset documented above; no game validation.
 
 ## 核心目标 / Core goal
 

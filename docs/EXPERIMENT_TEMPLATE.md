@@ -1,5 +1,7 @@
 # 实验记录模板
 
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 离线实验请填写 schema/solver 版本、输入 JSON、源文件哈希、预期/实际状态、截图与误差；游戏版本填 NOT_RUN，不虚构。 / Offline experiments record input, hashes, expected/actual, screenshots and errors; game version remains NOT_RUN. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
 - 实验 ID / 标题：
 - 问题与假设：
 - 源 commit / 文件：

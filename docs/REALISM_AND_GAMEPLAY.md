@@ -1,5 +1,7 @@
 # 现实感与游戏实际 / Realism and Gameplay
 
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 已有离线端口可达及部分用地指标，但本文交通/结构/游戏运行要求仍未验证。 / Offline reachability and partial footprint metrics do not validate operation or structure. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
 状态 / Status: **Design addendum; all runtime cases NOT_RUN.** 现实工程参考、引擎规则、视觉目标与游戏实测分别记录；本项目不用于道路施工或安全认证。
 
 ## 新增需求 / Additional requirements

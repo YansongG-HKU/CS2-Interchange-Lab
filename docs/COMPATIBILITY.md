@@ -1,5 +1,7 @@
 # Mod 兼容矩阵
 
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 浏览器 Demo 的 npm 依赖与 Mod 兼容无关；下表仍全部 NOT_TESTED。 / Browser dependencies do not establish game compatibility; every row remains NOT_TESTED. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
 
 以下 `NOT_TESTED` 是本项目状态，资料阅读不能改成 PASS。安装前记录当前游戏 build、Mod 精确版本、PDX ID、依赖与 playset 快照。
 

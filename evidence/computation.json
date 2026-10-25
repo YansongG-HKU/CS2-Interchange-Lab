@@ -1,0 +1,1663 @@
+{
+  "version": "offline-0.1.0",
+  "node": "v24.19.0",
+  "date": "2026-10-25T20:04:42.827Z",
+  "requirementsHead": "bfccebe7467b2a8935306910b7763957ec98c207",
+  "records": [
+    {
+      "name": "curved-skew",
+      "input": {
+        "schema": 1,
+        "solver": "offline-0.1.0",
+        "name": "curved-skew",
+        "trafficSide": "RHT",
+        "roadType": "motor",
+        "laneMode": "one-way-6-to-4+2",
+        "curves": [
+          [
+            [
+              -260,
+              -45
+            ],
+            [
+              -100,
+              -110
+            ],
+            [
+              100,
+              90
+            ],
+            [
+              260,
+              35
+            ]
+          ],
+          [
+            [
+              -160,
+              -250
+            ],
+            [
+              -70,
+              -85
+            ],
+            [
+              45,
+              80
+            ],
+            [
+              175,
+              250
+            ]
+          ]
+        ],
+        "site": [
+          [
+            -320,
+            -320
+          ],
+          [
+            320,
+            -320
+          ],
+          [
+            320,
+            320
+          ],
+          [
+            -320,
+            320
+          ],
+          [
+            -320,
+            -320
+          ]
+        ],
+        "exclusions": [],
+        "crossing": 0,
+        "anchor": 80,
+        "handle": 65,
+        "laneWidth": 3.5,
+        "roadWidth": 28,
+        "reserve": 3,
+        "areaCap": 100000,
+        "heightCap": 15,
+        "layerCap": 3,
+        "preference": "urban",
+        "required": [
+          "A+>A+",
+          "A+>B+",
+          "A+>B-",
+          "A->A-",
+          "A->B+",
+          "A->B-",
+          "B+>A+",
+          "B+>A-",
+          "B+>B+",
+          "B->A+",
+          "B->A-",
+          "B->B-"
+        ],
+        "sampling": 128
+      },
+      "expected": "NO_CANDIDATE_FOUND",
+      "actual": "NO_CANDIDATE_FOUND",
+      "pass": true,
+      "elapsedMs": 362.691489,
+      "crossings": [
+        {
+          "p": [
+            -16.412757278301434,
+            -15.104809918257333
+          ],
+          "s": [
+            251.53336779316746,
+            275.4013190438657
+          ],
+          "angle": 0.5750864635425017
+        }
+      ],
+      "diagnostics": [],
+      "candidates": [
+        {
+          "id": "d0.8",
+          "status": "CONSTRAINT_VIOLATION",
+          "diagnostics": [
+            {
+              "code": "OFFSET_RISK",
+              "path": "A+>B-",
+              "point": [
+                -36.84388731704324,
+                -31.707203981099248
+              ]
+            },
+            {
+              "code": "OFFSET_RISK",
+              "path": "A->B+",
+              "point": [
+                3.756083407955604,
+                1.2444367211864127
+              ]
+            }
+          ],
+          "splitDiagnostics": [],
+          "land": {
+            "total": 36834.56310077971,
+            "site": 409600,
+            "inside": 36834.56310077971,
+            "overflow": 0,
+            "ratio": 0.08992813257026297,
+            "added": 46.83279457861654,
+            "removed": 0,
+            "retained": 36787.73030620108,
+            "net": 46.83279457861654
+          },
+          "od": {
+            "required": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "reachable": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "forbiddenReachable": []
+          },
+          "positionBound": 0.01226815180962286
+        },
+        {
+          "id": "d1",
+          "status": "CONSTRAINT_VIOLATION",
+          "diagnostics": [
+            {
+              "code": "OFFSET_RISK",
+              "path": "A+>B-",
+              "point": [
+                -41.53371582335331,
+                -35.75979385287089
+              ]
+            },
+            {
+              "code": "OFFSET_RISK",
+              "path": "A->B+",
+              "point": [
+                8.351353865997872,
+                5.174916734528329
+              ]
+            }
+          ],
+          "splitDiagnostics": [],
+          "land": {
+            "total": 36915.330164872044,
+            "site": 409600,
+            "inside": 36915.330164872044,
+            "overflow": 0,
+            "ratio": 0.09012531778533214,
+            "added": 127.59985867095011,
+            "removed": 0,
+            "retained": 36787.7303062011,
+            "net": 127.59985867095011
+          },
+          "od": {
+            "required": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "reachable": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "forbiddenReachable": []
+          },
+          "positionBound": 0.01226815180962286
+        },
+        {
+          "id": "d1.2",
+          "status": "CONSTRAINT_VIOLATION",
+          "diagnostics": [
+            {
+              "code": "OFFSET_RISK",
+              "path": "A+>B-",
+              "point": [
+                -46.21985235506268,
+                -39.98257541517174
+              ]
+            },
+            {
+              "code": "OFFSET_RISK",
+              "path": "A->B+",
+              "point": [
+                12.920592807858707,
+                9.23047929215356
+              ]
+            }
+          ],
+          "splitDiagnostics": [],
+          "land": {
+            "total": 37025.501828379805,
+            "site": 409600,
+            "inside": 37025.501828379805,
+            "overflow": 0,
+            "ratio": 0.09039429157319288,
+            "added": 237.77152217868235,
+            "removed": 0,
+            "retained": 36787.73030620108,
+            "net": 237.77152217868235
+          },
+          "od": {
+            "required": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "reachable": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "forbiddenReachable": []
+          },
+          "positionBound": 0.01226815180962286
+        }
+      ]
+    },
+    {
+      "name": "partial",
+      "input": {
+        "schema": 1,
+        "solver": "offline-0.1.0",
+        "name": "partial",
+        "trafficSide": "RHT",
+        "roadType": "motor",
+        "laneMode": "one-way-6-to-4+2",
+        "curves": [
+          [
+            [
+              -260,
+              -45
+            ],
+            [
+              -100,
+              -110
+            ],
+            [
+              100,
+              90
+            ],
+            [
+              260,
+              35
+            ]
+          ],
+          [
+            [
+              -160,
+              -250
+            ],
+            [
+              -70,
+              -85
+            ],
+            [
+              45,
+              80
+            ],
+            [
+              175,
+              250
+            ]
+          ]
+        ],
+        "site": [
+          [
+            -320,
+            -320
+          ],
+          [
+            320,
+            -320
+          ],
+          [
+            320,
+            320
+          ],
+          [
+            -320,
+            320
+          ],
+          [
+            -320,
+            -320
+          ]
+        ],
+        "exclusions": [],
+        "crossing": 0,
+        "anchor": 80,
+        "handle": 65,
+        "laneWidth": 3.5,
+        "roadWidth": 28,
+        "reserve": 3,
+        "areaCap": 100000,
+        "heightCap": 15,
+        "layerCap": 3,
+        "preference": "urban",
+        "required": [
+          "A+>A+",
+          "A+>B+",
+          "A->A-",
+          "B+>B+",
+          "B->B-"
+        ],
+        "sampling": 128
+      },
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN",
+      "pass": true,
+      "elapsedMs": 65.56423999999998,
+      "crossings": [
+        {
+          "p": [
+            -16.412757278301434,
+            -15.104809918257333
+          ],
+          "s": [
+            251.53336779316746,
+            275.4013190438657
+          ],
+          "angle": 0.5750864635425017
+        }
+      ],
+      "diagnostics": [],
+      "candidates": [
+        {
+          "id": "d0.8",
+          "status": "UNKNOWN",
+          "diagnostics": [],
+          "splitDiagnostics": [],
+          "land": {
+            "total": 36787.73030620108,
+            "site": 409600,
+            "inside": 36787.73030620108,
+            "overflow": 0,
+            "ratio": 0.08981379469287373,
+            "added": 0,
+            "removed": 0,
+            "retained": 36787.73030620108,
+            "net": 0
+          },
+          "od": {
+            "required": [
+              "A+>A+",
+              "A+>B+",
+              "A->A-",
+              "B+>B+",
+              "B->B-"
+            ],
+            "reachable": [
+              "A+>A+",
+              "A+>B+",
+              "A->A-",
+              "B+>B+",
+              "B->B-"
+            ],
+            "forbiddenReachable": []
+          },
+          "positionBound": 0.01226815180962286
+        },
+        {
+          "id": "d1",
+          "status": "UNKNOWN",
+          "diagnostics": [],
+          "splitDiagnostics": [],
+          "land": {
+            "total": 36787.73030620108,
+            "site": 409600,
+            "inside": 36787.73030620108,
+            "overflow": 0,
+            "ratio": 0.08981379469287373,
+            "added": 0,
+            "removed": 0,
+            "retained": 36787.73030620108,
+            "net": 0
+          },
+          "od": {
+            "required": [
+              "A+>A+",
+              "A+>B+",
+              "A->A-",
+              "B+>B+",
+              "B->B-"
+            ],
+            "reachable": [
+              "A+>A+",
+              "A+>B+",
+              "A->A-",
+              "B+>B+",
+              "B->B-"
+            ],
+            "forbiddenReachable": []
+          },
+          "positionBound": 0.01226815180962286
+        },
+        {
+          "id": "d1.2",
+          "status": "UNKNOWN",
+          "diagnostics": [],
+          "splitDiagnostics": [],
+          "land": {
+            "total": 36787.73030620108,
+            "site": 409600,
+            "inside": 36787.73030620108,
+            "overflow": 0,
+            "ratio": 0.08981379469287373,
+            "added": 0,
+            "removed": 0,
+            "retained": 36787.73030620108,
+            "net": 0
+          },
+          "od": {
+            "required": [
+              "A+>A+",
+              "A+>B+",
+              "A->A-",
+              "B+>B+",
+              "B->B-"
+            ],
+            "reachable": [
+              "A+>A+",
+              "A+>B+",
+              "A->A-",
+              "B+>B+",
+              "B->B-"
+            ],
+            "forbiddenReachable": []
+          },
+          "positionBound": 0.01226815180962286
+        }
+      ]
+    },
+    {
+      "name": "multiple",
+      "input": {
+        "schema": 1,
+        "solver": "offline-0.1.0",
+        "name": "multiple",
+        "trafficSide": "RHT",
+        "roadType": "motor",
+        "laneMode": "one-way-6-to-4+2",
+        "curves": [
+          [
+            [
+              -260,
+              0
+            ],
+            [
+              -80,
+              0
+            ],
+            [
+              80,
+              0
+            ],
+            [
+              260,
+              0
+            ]
+          ],
+          [
+            [
+              -250,
+              -80
+            ],
+            [
+              -90,
+              240
+            ],
+            [
+              90,
+              -240
+            ],
+            [
+              250,
+              80
+            ]
+          ]
+        ],
+        "site": [
+          [
+            -320,
+            -320
+          ],
+          [
+            320,
+            -320
+          ],
+          [
+            320,
+            320
+          ],
+          [
+            -320,
+            320
+          ],
+          [
+            -320,
+            -320
+          ]
+        ],
+        "exclusions": [],
+        "crossing": null,
+        "anchor": 80,
+        "handle": 65,
+        "laneWidth": 3.5,
+        "roadWidth": 28,
+        "reserve": 3,
+        "areaCap": 100000,
+        "heightCap": 15,
+        "layerCap": 3,
+        "preference": "urban",
+        "required": [
+          "A+>A+",
+          "A+>B+",
+          "A+>B-",
+          "A->A-",
+          "A->B+",
+          "A->B-",
+          "B+>A+",
+          "B+>A-",
+          "B+>B+",
+          "B->A+",
+          "B->A-",
+          "B->B-"
+        ],
+        "sampling": 128
+      },
+      "expected": "INPUT_INVALID",
+      "actual": "INPUT_INVALID",
+      "pass": true,
+      "elapsedMs": 4.229148000000009,
+      "crossings": [
+        {
+          "p": [
+            -195.16913087015163,
+            0
+          ],
+          "s": [
+            64.83086912984837,
+            97.42744547657522
+          ],
+          "angle": 0.698159163557566
+        },
+        {
+          "p": [
+            0,
+            0
+          ],
+          "s": [
+            260,
+            309.0052054689567
+          ],
+          "angle": 0.42579703632987964
+        },
+        {
+          "p": [
+            195.16913087015163,
+            0
+          ],
+          "s": [
+            455.1691308701516,
+            520.5829654613381
+          ],
+          "angle": 0.698159163557566
+        }
+      ],
+      "diagnostics": [
+        {
+          "code": "SELECT_CROSSING",
+          "path": "crossing"
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "name": "near-tangent",
+      "input": {
+        "schema": 1,
+        "solver": "offline-0.1.0",
+        "name": "near-tangent",
+        "trafficSide": "RHT",
+        "roadType": "motor",
+        "laneMode": "one-way-6-to-4+2",
+        "curves": [
+          [
+            [
+              -260,
+              0
+            ],
+            [
+              -80,
+              0
+            ],
+            [
+              80,
+              0
+            ],
+            [
+              260,
+              0
+            ]
+          ],
+          [
+            [
+              -260,
+              -4
+            ],
+            [
+              -80,
+              -1
+            ],
+            [
+              80,
+              1
+            ],
+            [
+              260,
+              4
+            ]
+          ]
+        ],
+        "site": [
+          [
+            -320,
+            -320
+          ],
+          [
+            320,
+            -320
+          ],
+          [
+            320,
+            320
+          ],
+          [
+            -320,
+            320
+          ],
+          [
+            -320,
+            -320
+          ]
+        ],
+        "exclusions": [],
+        "crossing": 0,
+        "anchor": 80,
+        "handle": 65,
+        "laneWidth": 3.5,
+        "roadWidth": 28,
+        "reserve": 3,
+        "areaCap": 100000,
+        "heightCap": 15,
+        "layerCap": 3,
+        "preference": "urban",
+        "required": [
+          "A+>A+",
+          "A+>B+",
+          "A+>B-",
+          "A->A-",
+          "A->B+",
+          "A->B-",
+          "B+>A+",
+          "B+>A-",
+          "B+>B+",
+          "B->A+",
+          "B->A-",
+          "B->B-"
+        ],
+        "sampling": 128
+      },
+      "expected": "UNSUPPORTED",
+      "actual": "UNSUPPORTED",
+      "pass": true,
+      "elapsedMs": 3.077036000000021,
+      "crossings": [
+        {
+          "p": [
+            0,
+            0
+          ],
+          "s": [
+            260,
+            260.0308129881369
+          ],
+          "angle": 0.014704292441876156
+        }
+      ],
+      "diagnostics": [
+        {
+          "code": "NEAR_TANGENT",
+          "path": "crossing",
+          "point": [
+            0,
+            0
+          ]
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "name": "small-site",
+      "input": {
+        "schema": 1,
+        "solver": "offline-0.1.0",
+        "name": "small-site",
+        "trafficSide": "RHT",
+        "roadType": "motor",
+        "laneMode": "one-way-6-to-4+2",
+        "curves": [
+          [
+            [
+              -260,
+              -45
+            ],
+            [
+              -100,
+              -110
+            ],
+            [
+              100,
+              90
+            ],
+            [
+              260,
+              35
+            ]
+          ],
+          [
+            [
+              -160,
+              -250
+            ],
+            [
+              -70,
+              -85
+            ],
+            [
+              45,
+              80
+            ],
+            [
+              175,
+              250
+            ]
+          ]
+        ],
+        "site": [
+          [
+            -30,
+            -30
+          ],
+          [
+            30,
+            -30
+          ],
+          [
+            30,
+            30
+          ],
+          [
+            -30,
+            30
+          ],
+          [
+            -30,
+            -30
+          ]
+        ],
+        "exclusions": [],
+        "crossing": 0,
+        "anchor": 80,
+        "handle": 65,
+        "laneWidth": 3.5,
+        "roadWidth": 28,
+        "reserve": 3,
+        "areaCap": 100000,
+        "heightCap": 15,
+        "layerCap": 3,
+        "preference": "urban",
+        "required": [
+          "A+>A+",
+          "A+>B+",
+          "A+>B-",
+          "A->A-",
+          "A->B+",
+          "A->B-",
+          "B+>A+",
+          "B+>A-",
+          "B+>B+",
+          "B->A+",
+          "B->A-",
+          "B->B-"
+        ],
+        "sampling": 128
+      },
+      "expected": "NO_CANDIDATE_FOUND",
+      "actual": "NO_CANDIDATE_FOUND",
+      "pass": true,
+      "elapsedMs": 242.81998900000002,
+      "crossings": [
+        {
+          "p": [
+            -16.412757278301434,
+            -15.104809918257333
+          ],
+          "s": [
+            251.53336779316746,
+            275.4013190438657
+          ],
+          "angle": 0.5750864635425017
+        }
+      ],
+      "diagnostics": [],
+      "candidates": [
+        {
+          "id": "d0.8",
+          "status": "CONSTRAINT_VIOLATION",
+          "diagnostics": [
+            {
+              "code": "OFFSET_RISK",
+              "path": "A+>B-",
+              "point": [
+                -36.84388731704324,
+                -31.707203981099248
+              ]
+            },
+            {
+              "code": "OFFSET_RISK",
+              "path": "A->B+",
+              "point": [
+                3.756083407955604,
+                1.2444367211864127
+              ]
+            },
+            {
+              "code": "OVERFLOW",
+              "path": "site",
+              "measured": 33892.11396101112,
+              "limit": 0,
+              "point": [
+                -266.39840979825095,
+                -60.74993181107926
+              ]
+            }
+          ],
+          "splitDiagnostics": [],
+          "land": {
+            "total": 36834.56310077971,
+            "site": 3600,
+            "inside": 2942.449139768621,
+            "overflow": 33892.11396101112,
+            "ratio": 0.8173469832690614,
+            "added": 46.83279457861654,
+            "removed": 0,
+            "retained": 36787.73030620108,
+            "net": 46.83279457861654
+          },
+          "od": {
+            "required": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "reachable": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "forbiddenReachable": []
+          },
+          "positionBound": 0.01226815180962286
+        },
+        {
+          "id": "d1",
+          "status": "CONSTRAINT_VIOLATION",
+          "diagnostics": [
+            {
+              "code": "OFFSET_RISK",
+              "path": "A+>B-",
+              "point": [
+                -41.53371582335331,
+                -35.75979385287089
+              ]
+            },
+            {
+              "code": "OFFSET_RISK",
+              "path": "A->B+",
+              "point": [
+                8.351353865997872,
+                5.174916734528329
+              ]
+            },
+            {
+              "code": "OVERFLOW",
+              "path": "site",
+              "measured": 33936.19488826206,
+              "limit": 0,
+              "point": [
+                -266.39840979825095,
+                -60.74993181107926
+              ]
+            }
+          ],
+          "splitDiagnostics": [],
+          "land": {
+            "total": 36915.330164872044,
+            "site": 3600,
+            "inside": 2979.1352766100185,
+            "overflow": 33936.19488826206,
+            "ratio": 0.8275375768361163,
+            "added": 127.59985867095011,
+            "removed": 0,
+            "retained": 36787.7303062011,
+            "net": 127.59985867095011
+          },
+          "od": {
+            "required": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "reachable": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "forbiddenReachable": []
+          },
+          "positionBound": 0.01226815180962286
+        },
+        {
+          "id": "d1.2",
+          "status": "CONSTRAINT_VIOLATION",
+          "diagnostics": [
+            {
+              "code": "OFFSET_RISK",
+              "path": "A+>B-",
+              "point": [
+                -46.21985235506268,
+                -39.98257541517174
+              ]
+            },
+            {
+              "code": "OFFSET_RISK",
+              "path": "A->B+",
+              "point": [
+                12.920592807858707,
+                9.23047929215356
+              ]
+            },
+            {
+              "code": "OVERFLOW",
+              "path": "site",
+              "measured": 33999.2888482884,
+              "limit": 0,
+              "point": [
+                -266.39840979825095,
+                -60.74993181107926
+              ]
+            }
+          ],
+          "splitDiagnostics": [],
+          "land": {
+            "total": 37025.501828379805,
+            "site": 3600,
+            "inside": 3026.2129800914163,
+            "overflow": 33999.2888482884,
+            "ratio": 0.8406147166920601,
+            "added": 237.77152217868235,
+            "removed": 0,
+            "retained": 36787.73030620108,
+            "net": 237.77152217868235
+          },
+          "od": {
+            "required": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "reachable": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "forbiddenReachable": []
+          },
+          "positionBound": 0.01226815180962286
+        }
+      ]
+    },
+    {
+      "name": "exclusion",
+      "input": {
+        "schema": 1,
+        "solver": "offline-0.1.0",
+        "name": "exclusion",
+        "trafficSide": "RHT",
+        "roadType": "motor",
+        "laneMode": "one-way-6-to-4+2",
+        "curves": [
+          [
+            [
+              -260,
+              -45
+            ],
+            [
+              -100,
+              -110
+            ],
+            [
+              100,
+              90
+            ],
+            [
+              260,
+              35
+            ]
+          ],
+          [
+            [
+              -160,
+              -250
+            ],
+            [
+              -70,
+              -85
+            ],
+            [
+              45,
+              80
+            ],
+            [
+              175,
+              250
+            ]
+          ]
+        ],
+        "site": [
+          [
+            -320,
+            -320
+          ],
+          [
+            320,
+            -320
+          ],
+          [
+            320,
+            320
+          ],
+          [
+            -320,
+            320
+          ],
+          [
+            -320,
+            -320
+          ]
+        ],
+        "exclusions": [
+          [
+            [
+              -30,
+              -30
+            ],
+            [
+              30,
+              -30
+            ],
+            [
+              30,
+              30
+            ],
+            [
+              -30,
+              30
+            ],
+            [
+              -30,
+              -30
+            ]
+          ]
+        ],
+        "crossing": 0,
+        "anchor": 80,
+        "handle": 65,
+        "laneWidth": 3.5,
+        "roadWidth": 28,
+        "reserve": 3,
+        "areaCap": 100000,
+        "heightCap": 15,
+        "layerCap": 3,
+        "preference": "urban",
+        "required": [
+          "A+>A+",
+          "A+>B+",
+          "A+>B-",
+          "A->A-",
+          "A->B+",
+          "A->B-",
+          "B+>A+",
+          "B+>A-",
+          "B+>B+",
+          "B->A+",
+          "B->A-",
+          "B->B-"
+        ],
+        "sampling": 128
+      },
+      "expected": "NO_CANDIDATE_FOUND",
+      "actual": "NO_CANDIDATE_FOUND",
+      "pass": true,
+      "elapsedMs": 299.88227099999995,
+      "crossings": [
+        {
+          "p": [
+            -16.412757278301434,
+            -15.104809918257333
+          ],
+          "s": [
+            251.53336779316746,
+            275.4013190438657
+          ],
+          "angle": 0.5750864635425017
+        }
+      ],
+      "diagnostics": [],
+      "candidates": [
+        {
+          "id": "d0.8",
+          "status": "CONSTRAINT_VIOLATION",
+          "diagnostics": [
+            {
+              "code": "OFFSET_RISK",
+              "path": "A+>B-",
+              "point": [
+                -36.84388731704324,
+                -31.707203981099248
+              ]
+            },
+            {
+              "code": "OFFSET_RISK",
+              "path": "A->B+",
+              "point": [
+                3.756083407955604,
+                1.2444367211864127
+              ]
+            },
+            {
+              "code": "OVERFLOW",
+              "path": "site",
+              "measured": 2942.449139768621,
+              "limit": 0,
+              "point": [
+                -30,
+                -30
+              ]
+            }
+          ],
+          "splitDiagnostics": [],
+          "land": {
+            "total": 36834.56310077971,
+            "site": 406000,
+            "inside": 33892.11396101112,
+            "overflow": 2942.449139768621,
+            "ratio": 0.08347811320446089,
+            "added": 46.83279457861654,
+            "removed": 0,
+            "retained": 36787.73030620108,
+            "net": 46.83279457861654
+          },
+          "od": {
+            "required": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "reachable": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "forbiddenReachable": []
+          },
+          "positionBound": 0.01226815180962286
+        },
+        {
+          "id": "d1",
+          "status": "CONSTRAINT_VIOLATION",
+          "diagnostics": [
+            {
+              "code": "OFFSET_RISK",
+              "path": "A+>B-",
+              "point": [
+                -41.53371582335331,
+                -35.75979385287089
+              ]
+            },
+            {
+              "code": "OFFSET_RISK",
+              "path": "A->B+",
+              "point": [
+                8.351353865997872,
+                5.174916734528329
+              ]
+            },
+            {
+              "code": "OVERFLOW",
+              "path": "site",
+              "measured": 2979.1352766100185,
+              "limit": 0,
+              "point": [
+                -30,
+                -30
+              ]
+            }
+          ],
+          "splitDiagnostics": [],
+          "land": {
+            "total": 36915.330164872044,
+            "site": 406000,
+            "inside": 33936.19488826206,
+            "overflow": 2979.1352766100185,
+            "ratio": 0.08358668691690163,
+            "added": 127.59985867095011,
+            "removed": 0,
+            "retained": 36787.7303062011,
+            "net": 127.59985867095011
+          },
+          "od": {
+            "required": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "reachable": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "forbiddenReachable": []
+          },
+          "positionBound": 0.01226815180962286
+        },
+        {
+          "id": "d1.2",
+          "status": "CONSTRAINT_VIOLATION",
+          "diagnostics": [
+            {
+              "code": "OFFSET_RISK",
+              "path": "A+>B-",
+              "point": [
+                -46.21985235506268,
+                -39.98257541517174
+              ]
+            },
+            {
+              "code": "OFFSET_RISK",
+              "path": "A->B+",
+              "point": [
+                12.920592807858707,
+                9.23047929215356
+              ]
+            },
+            {
+              "code": "OVERFLOW",
+              "path": "site",
+              "measured": 3026.2129800914163,
+              "limit": 0,
+              "point": [
+                -30,
+                -30
+              ]
+            }
+          ],
+          "splitDiagnostics": [],
+          "land": {
+            "total": 37025.501828379805,
+            "site": 406000,
+            "inside": 33999.2888482884,
+            "overflow": 3026.2129800914163,
+            "ratio": 0.08374209075933103,
+            "added": 237.77152217868235,
+            "removed": 0,
+            "retained": 36787.73030620108,
+            "net": 237.77152217868235
+          },
+          "od": {
+            "required": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "reachable": [
+              "A+>A+",
+              "A+>B+",
+              "A+>B-",
+              "A->A-",
+              "A->B+",
+              "A->B-",
+              "B+>A+",
+              "B+>A-",
+              "B+>B+",
+              "B->A+",
+              "B->A-",
+              "B->B-"
+            ],
+            "forbiddenReachable": []
+          },
+          "positionBound": 0.01226815180962286
+        }
+      ]
+    },
+    {
+      "name": "invalid",
+      "input": {
+        "schema": 1,
+        "solver": "offline-0.1.0",
+        "name": "invalid",
+        "trafficSide": "RHT",
+        "roadType": "motor",
+        "laneMode": "one-way-6-to-4+2",
+        "curves": [
+          [
+            [
+              -260,
+              -45
+            ],
+            [
+              -260,
+              -45
+            ],
+            [
+              100,
+              90
+            ],
+            [
+              260,
+              35
+            ]
+          ],
+          [
+            [
+              -160,
+              -250
+            ],
+            [
+              -70,
+              -85
+            ],
+            [
+              45,
+              80
+            ],
+            [
+              175,
+              250
+            ]
+          ]
+        ],
+        "site": [
+          [
+            -320,
+            -320
+          ],
+          [
+            320,
+            -320
+          ],
+          [
+            320,
+            320
+          ],
+          [
+            -320,
+            320
+          ],
+          [
+            -320,
+            -320
+          ]
+        ],
+        "exclusions": [],
+        "crossing": 0,
+        "anchor": 80,
+        "handle": 65,
+        "laneWidth": 3.5,
+        "roadWidth": 28,
+        "reserve": 3,
+        "areaCap": 100000,
+        "heightCap": 15,
+        "layerCap": 3,
+        "preference": "urban",
+        "required": [
+          "A+>A+",
+          "A+>B+",
+          "A+>B-",
+          "A->A-",
+          "A->B+",
+          "A->B-",
+          "B+>A+",
+          "B+>A-",
+          "B+>B+",
+          "B->A+",
+          "B->A-",
+          "B->B-"
+        ],
+        "sampling": 128
+      },
+      "expected": "UNSUPPORTED",
+      "actual": "UNSUPPORTED",
+      "pass": true,
+      "elapsedMs": 0.6269029999999702,
+      "crossings": [],
+      "diagnostics": [
+        {
+          "code": "UNSUPPORTED",
+          "path": "curves[0]"
+        }
+      ],
+      "candidates": []
+    }
+  ],
+  "refinement": [
+    {
+      "id": "d0.8",
+      "samples": [
+        128,
+        256
+      ],
+      "area128": 36787.73030620108,
+      "area256": 36788.08345804831,
+      "absoluteDifference": 0.3531518472300377,
+      "meaning": "observed difference, NOT a certified area error bound"
+    },
+    {
+      "id": "d1",
+      "samples": [
+        128,
+        256
+      ],
+      "area128": 36787.73030620108,
+      "area256": 36788.08345804831,
+      "absoluteDifference": 0.3531518472300377,
+      "meaning": "observed difference, NOT a certified area error bound"
+    },
+    {
+      "id": "d1.2",
+      "samples": [
+        128,
+        256
+      ],
+      "area128": 36787.73030620108,
+      "area256": 36788.08345804831,
+      "absoluteDifference": 0.3531518472300377,
+      "meaning": "observed difference, NOT a certified area error bound"
+    }
+  ]
+}
