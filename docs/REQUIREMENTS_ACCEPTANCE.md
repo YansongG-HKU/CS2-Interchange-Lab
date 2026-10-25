@@ -62,3 +62,19 @@
 |A31|版本更新与成本性能 / Version and cost|同条件重测并说明费用/性能数据来源 / Version-bound comparisons|
 
 追溯：R13→A24，R14/R15→A25，R16→A26，R17→A27，R18→A28，R19→A29，R20→A30/A31。来源在REALISM_AND_GAMEPLAY及两份research补充。全部仍NOT_RUN。
+
+## 曲线场地新增场景 / Curved-site cases
+
+|Case|场景 / Scenario|期望 / Expected|
+|---|---|---|
+|A32|两曲线多交点/近切 / Multiple or tangent crossings|用户选目标区，歧义明确，无隐式正交化 / Explicit ambiguity handling|
+|A33|同OD城区/郊区预设 / Same-OD urban/suburban|偏好透明、硬限制不变，无偷偷删方向 / No hidden intent changes|
+|A34|L形/窄长/带洞地块 / Irregular parcels|按形状包络验，不仅总面积 / Shape-aware checks|
+|A35|同投影多层桥 / Stacked decks|投影并集不重复，局部最大层数正确 / Union area and local levels|
+|A36|新增/移除/保留 / Footprint changes|固定F与基线，区分差集/交集/净值 / Consistent set metrics|
+|A37|越界与面积占比 / Ratio and overflow|B有效>0，内占比/外溢/总面积全部显示 / Valid denominator and visible overflow|
+|A38|限层限高后搜索失败 / Failed bounded search|区分冲突/超时/未找到与证明无解 / No false proof of infeasibility|
+|A39|全高度禁建与锁区 / Exclusions and locks|不自动高架跨越、开启无碰撞或删OD / Respect explicit exclusions|
+|A40|候选与参数复现 / Reproducibility|同需求同尺度，Pareto限本次集合，记录版本/容差/设置 / Fair reproducible comparisons|
+
+追溯：R21→A32；R22→A34/A39；R23→A33；R24→A35/A38；R25→A38/A40；R26→A35–A37/A40。来源见CURVED_SITE_OPTIMIZATION及research/land_optimization、research/land_controls。全部NOT_RUN。

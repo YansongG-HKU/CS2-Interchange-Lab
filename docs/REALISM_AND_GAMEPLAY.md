@@ -39,3 +39,6 @@
 比较采用同源存档分支、相同预热与模拟时间，记录天气/路况、下游控制、车辆类型、人口就业等条件。若不能锁定需求/随机性，重复观察并报告波动与限制。服务/货运按类别验证，普通车成功不替代应急到达；缺失观测能力保持UNKNOWN。 / Use comparable save branches and conditions; qualify uncontrolled observations and per-vehicle-class access.
 
 性能应分别测预览、生成、加载、存档大小、模拟推进和渲染帧时间；FPS不等于仿真速度。 / Separate UI, build, load, save, simulation and rendering performance.
+
+## 占地与堆叠权衡
+详见 [两曲线与场地占用](CURVED_SITE_OPTIMIZATION.md)。集散/展开/紧凑只是同需求候选，不能从城区/郊区标签推断最优结构。规划预留不是法律征地，桥下空间不是默认可开发土地，少占地也不等于游戏性能更好。

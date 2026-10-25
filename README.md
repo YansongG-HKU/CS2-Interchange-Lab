@@ -53,3 +53,5 @@
 研究参考暂定 CS2 Placemaker；借鉴“意图—预览—确认”而非宣称其已有立交求解能力。详细证据与社区线索见 [sources](docs/SOURCES.md)。
 
 新增 [现实感与游戏实际 / Realism and gameplay](docs/REALISM_AND_GAMEPLAY.md)：服务/系统型、主线连续、回堵、集散、桥梁全包络及交通评价；不把现实工程参考当游戏硬规则。 / Design-only requirements; no runtime validation.
+
+核心扩展：[两曲线与场地占用 / Curved site optimization](docs/CURVED_SITE_OPTIMIZATION.md)。城区紧凑、郊区展开少堆叠是可编辑偏好，与硬面积/高度/层数/禁建边界分开；不牺牲车道或流向来偷偷凑方案。 / Editable preferences never silently relax movement or site constraints.

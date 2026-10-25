@@ -58,3 +58,6 @@
 
 ## 运行与现实感图层 / Operation and realism layers
 新增服务型/系统型选项、驾驶视角、队尾/回堵触及主线标记、未知数据标签，以及占地/道路长度/编辑对象量比较。费用与性能仅显示实际可读或测量值，不用空道路截图代替交通评价。 / Add role selection, driver views, spillback markers and honest measured comparisons.
+
+## 场地预设与候选比较 / Site presets and alternatives
+城区/郊区/自定义只设置透明偏好；独立显示硬边界、禁建洞、面积口径、层数与高度基准。用同尺度平面图、纵断面、全部指标及冲突位置比较有限候选，不凑数、不静默放宽。新术语同时中英：紧凑Compact、展开Spread-out、少堆叠Fewer stacked levels、预留包络Reservation envelope、越界面积Overflow area、未找到可行解No feasible candidate found。

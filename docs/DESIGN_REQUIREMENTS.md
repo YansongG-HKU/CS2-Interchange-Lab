@@ -54,3 +54,6 @@ Apply之前重新读取源道路ID、版本、依赖和用户编辑状态，与�
 
 ## 现实感与运行补充 / Realism and operation
 新增R13–R20见 [现实感与游戏实际](REALISM_AND_GAMEPLAY.md)：服务/系统型、主线识别、驾驶视角、下游回堵、集散、结构全包络、地方/服务可达性及诚实交通评价。均为未实现需求。 / Additional requirements remain unimplemented.
+
+## 两曲线与用地核心扩展 / Curved-site core requirements
+R21–R26在 [场地优化契约](CURVED_SITE_OPTIMIZATION.md) 中定义：曲线×曲线、可用地块/禁建区、城区/郊区预设、独立占地/高度/层数边界、非支配候选和可复现指标。仍未实现，搜索失败不等于证明无解。 / Core design requirements, not implemented features.

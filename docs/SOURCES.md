@@ -69,3 +69,10 @@ https://mods.paradoxplaza.com/mods/133736/Windows
 - [官方版本与Mod行为、社区线索](research/game_pitfalls.md)
 
 核查2026-10-25 UTC。真实工程资料仅借鉴原理，不构成全球/游戏数值标准；版本化行为不能由历史帖永久推断。
+
+## 曲线与用地数学/交互研究
+
+- [集合几何与多目标设计](research/land_optimization.md)
+- [场地控制与可视化](research/land_controls.md)
+
+数学文档支撑方法，不代表CS2 API可用或本项目已实现求解。所有面积/高度/层数默认值仍待来源与实际环境确定。

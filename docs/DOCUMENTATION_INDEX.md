@@ -12,6 +12,7 @@
 - [README.md](../README.md)
 - [RIGHTS.md](../RIGHTS.md)
 - [docs/COMPATIBILITY.md](COMPATIBILITY.md)
+- [docs/CURVED_SITE_OPTIMIZATION.md](CURVED_SITE_OPTIMIZATION.md)
 - [docs/DESIGN_REQUIREMENTS.md](DESIGN_REQUIREMENTS.md)
 - [docs/DEVELOPMENT.md](DEVELOPMENT.md)
 - [docs/DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md)
@@ -27,6 +28,8 @@
 - [docs/research/community.md](research/community.md)
 - [docs/research/game_pitfalls.md](research/game_pitfalls.md)
 - [docs/research/geometry.md](research/geometry.md)
+- [docs/research/land_controls.md](research/land_controls.md)
+- [docs/research/land_optimization.md](research/land_optimization.md)
 - [docs/research/realism_addendum.md](research/realism_addendum.md)
 - [docs/research/ux.md](research/ux.md)
 
@@ -45,3 +48,9 @@
 已复核无需修改：AGENTS/CONTRIBUTING继续要求全仓同步及双语，规则无变；RIGHTS无第三方资产/代码引入；Issue模板已有需求/证据字段；research/geometry、community、ux保留上一轮历史证据；.gitignore无新增输出类型。不存在新实现或游戏实验。
 
 检查内部链接和需求状态；全部运行验证仍NOT_RUN，不把现实参考数值或社区经验宣称为引擎规范。
+
+## 2026-10-26 曲线与场地优化影响记录
+
+新增CURVED_SITE_OPTIMIZATION、research/land_optimization和land_controls；更新README、DESIGN_REQUIREMENTS、GEOMETRY_AND_LANES、UX_AND_I18N、REALISM_AND_GAMEPLAY、ROAD_RULES、VALIDATION、REQUIREMENTS_ACCEPTANCE、ROADMAP、EXPERIMENT_TEMPLATE、DEVELOPMENT、PR模板、SOURCES、CHANGELOG及本索引。
+
+全部其余文档已核对无需修改：AGENTS/CONTRIBUTING通用一致性规则仍适用，RIGHTS无新代码资产授权，COMPATIBILITY无新依赖/通过结论，Issue模板已有需求/证据字段，之前5份research保存历史来源不追改，.gitignore无新增输出类型。核心需求数学审查修正完整预留集合、差集/净值、分母和越界、局部层数及搜索状态；内部链接检查，全部运行场景仍NOT_RUN。
