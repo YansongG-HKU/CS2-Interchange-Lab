@@ -22,3 +22,5 @@
 
 ## 需求变更同步
 设计变更必须同步 DESIGN_REQUIREMENTS、GEOMETRY_AND_LANES、UX_AND_I18N、REQUIREMENTS_ACCEPTANCE；中英文语义和状态一致。资料证据等级及未实现边界不得丢失。
+
+交通结论必须注明控变量及数据能力；无法观测或不能控制需求时只作观察，不以低流量或空路宣称容量提升。现实参数不得无来源冒充游戏阈值。

@@ -23,3 +23,5 @@ Traffic 作者说明 Road Builder 编辑道路可能重置自定义车道连接�
 
 ## 设计阶段补充
 Placemaker是交互参考，不自动加入运行依赖。RB/Traffic等外部编辑触发Apply前状态复核；缺少所需API或不支持车道类型时显式阻塞。兼容矩阵仍全部NOT_TESTED。
+
+游戏版本更新涉及换道/路径成本/失败出行时，重新验证行为；RoadBuilder/Traffic依赖缺失后的更新与重载需单独回归。参考research/game_pitfalls.md，仍全部NOT_TESTED。

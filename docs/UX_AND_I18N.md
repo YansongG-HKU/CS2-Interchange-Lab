@@ -55,3 +55,6 @@
 生成对象记录所有权和依赖关系；允许用户解绑/手工细调但必须解释后续自动更新的边界。重生成前比较用户改动，不能删除非本工具对象或静默覆盖手改；无法区分时阻止重生成。 / Track ownership; support a deliberate detach/manual-edit mode and protect external objects.
 
 这些需求受到Placemaker作者issue中数值输入、陈旧占用及手修诉求启发，不代表本项目或上游已经解决。 / These are issue-inspired requirements, not verified fixes.
+
+## 运行与现实感图层 / Operation and realism layers
+新增服务型/系统型选项、驾驶视角、队尾/回堵触及主线标记、未知数据标签，以及占地/道路长度/编辑对象量比较。费用与性能仅显示实际可读或测量值，不用空道路截图代替交通评价。 / Add role selection, driver views, spillback markers and honest measured comparisons.

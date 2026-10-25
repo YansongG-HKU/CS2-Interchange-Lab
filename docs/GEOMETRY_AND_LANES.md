@@ -44,3 +44,6 @@ Full 的基准由选定走廊边界、交通侧、合法端口类型生成：全
 节点新建/拆分/合并保留原→新映射，保护未选路段与上游相邻节点，禁止零长或重复段；中隔带断开、道路宽度突变和意外掉头另行检查。相邻节点间距与下游目的地影响交通分配，应做控制实验，不写成固定距离万能规律。 / Track node remapping, protect adjacent networks and check degeneracy, median breaks and unintended U-turns.
 
 OD验证限定选中立交影响区内的合法路径；经外部城市路口绕行不能充作本立交直达。全互通不承诺车道均匀利用，车辆OD需求与游戏路径选择需单独测试。 / External detours do not count as direct interchange movements; reachability does not guarantee balanced lane use.
+
+## 全结构与端部 / Structures and terminals
+几何影响区应包含服务型立交地面端部及回堵连接，不止匝道曲线；桥梁/护栏/分流鼻与道路横断面共同检查。视距/超高作为现实感目标与引擎实际支持分别标记，不将几何平顺等同现实安全。详见 [补充需求](REALISM_AND_GAMEPLAY.md)。

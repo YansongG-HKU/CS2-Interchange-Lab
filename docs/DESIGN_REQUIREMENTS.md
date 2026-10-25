@@ -51,3 +51,6 @@ A. 需求、来源与交互原型审查（本轮仅文档）；B. 只读道路�
 Apply之前重新读取源道路ID、版本、依赖和用户编辑状态，与预览快照比较；不同即阻止Apply并重算。不能仅标过期却仍应用旧结果。 / Re-read source state before Apply; stale previews cannot commit.
 
 “适合大多数人”当前是目标假设，不是调研统计结论；后续以普通玩家任务成功率、错误恢复和教程反馈验证。 / Broad usability is a hypothesis to validate, not a measured claim.
+
+## 现实感与运行补充 / Realism and operation
+新增R13–R20见 [现实感与游戏实际](REALISM_AND_GAMEPLAY.md)：服务/系统型、主线识别、驾驶视角、下游回堵、集散、结构全包络、地方/服务可达性及诚实交通评价。均为未实现需求。 / Additional requirements remain unimplemented.

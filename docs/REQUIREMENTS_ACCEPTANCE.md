@@ -47,3 +47,18 @@
 |R12|A13,A23|用户首阶段中英要求；UX与可访问性设计目标|
 
 各研究文件列直接来源及证据限制，全部Case仍NOT_RUN。
+
+## 现实感与运行新增场景 / Realism and operation cases
+
+|Case|场景 / Scenario|期望 / Expected|
+|---|---|---|
+|A24|服务/系统型 / Interchange role|区分高速及地面端部，不混full/free-flow / Separate role and coverage|
+|A25|主线与驾驶视角 / Continuity and view|检查坡顶+弯道+出口、标线箭头及镜像 / Check combined geometry and intent|
+|A26|下游阻塞 / Blocked terminal|记录队尾、主线回堵、消散，不只出口车道数 / Observe spillback|
+|A27|C-D与直接接入对照 / Collector-distributor alternative|控制需求，检查回流口瓶颈 / Compare without hiding bottlenecks|
+|A28|全结构包络 / Full envelope|梁底/桥墩/护栏/路肩检查，未知不通过 / Inspect full structure|
+|A29|地方/应急/步行服务 / Local access|保护已有通道，特殊类型不支持时阻塞 / Preserve existing routes|
+|A30|空路与失败出行 / Empty roads and failed trips|同时记录需求和完成率，缺观察能力明确限制 / No false improvement claims|
+|A31|版本更新与成本性能 / Version and cost|同条件重测并说明费用/性能数据来源 / Version-bound comparisons|
+
+追溯：R13→A24，R14/R15→A25，R16→A26，R17→A27，R18→A28，R19→A29，R20→A30/A31。来源在REALISM_AND_GAMEPLAY及两份research补充。全部仍NOT_RUN。

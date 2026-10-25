@@ -62,3 +62,10 @@ https://mods.paradoxplaza.com/mods/133736/Windows
 - [Placemaker与交互研究](research/ux.md)
 
 核查日期2026-10-25 UTC。社区帖子只支持需求/故障情境，不支持通用引擎因果；当前无法读取的来源或未锁版本应保留限制。
+
+## 现实感与运行补充来源
+
+- [交通机构参考及游戏映射](research/realism_addendum.md)
+- [官方版本与Mod行为、社区线索](research/game_pitfalls.md)
+
+核查2026-10-25 UTC。真实工程资料仅借鉴原理，不构成全球/游戏数值标准；版本化行为不能由历史帖永久推断。

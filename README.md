@@ -51,3 +51,5 @@
 - [验收场景 / Acceptance scenarios](docs/REQUIREMENTS_ACCEPTANCE.md)
 
 研究参考暂定 CS2 Placemaker；借鉴“意图—预览—确认”而非宣称其已有立交求解能力。详细证据与社区线索见 [sources](docs/SOURCES.md)。
+
+新增 [现实感与游戏实际 / Realism and gameplay](docs/REALISM_AND_GAMEPLAY.md)：服务/系统型、主线连续、回堵、集散、桥梁全包络及交通评价；不把现实工程参考当游戏硬规则。 / Design-only requirements; no runtime validation.
