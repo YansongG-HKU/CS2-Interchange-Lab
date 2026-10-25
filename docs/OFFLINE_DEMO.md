@@ -61,6 +61,7 @@ For n uniform Bézier parameter intervals, centreline linear interpolation devia
 
 ## Status, recovery and limitations / 状态、恢复与限制
 
+- `NOT_RUN`: the separate lane experiment was skipped because anchor prerequisites failed; no lane geometry/checks were run. / 接入范围前置条件失败，独立车道实验未运行。
 - `INPUT_INVALID`: malformed inputs / 输入错误；JSON load preserves last valid input on validation failure.
 - `UNSUPPORTED`: unsupported schema/type, stationary/self-crossing source or near-tangency / 不支持版本/道路/退化几何。
 - `CONSTRAINT_VIOLATION`: specific candidate's known planar conflict / 候选已知二维冲突。

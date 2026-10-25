@@ -2,33 +2,34 @@
 > cs2-interchange-offline-lab@0.1.0 test
 > node --test tests/core.test.js
 
-✔ 01: input limits and unsupported domain are explicit (28.179906ms)
-✔ 02: stationary and zero-length curves rejected (0.687597ms)
-✔ 03: arc station is metres, local tangent is analytical (0.512092ms)
-✔ 04: skew intersection keeps nonorthogonal original curves (326.832601ms)
-✔ 05: multi-crossings require explicit selection; choose second (271.097782ms)
-✔ 06: near tangent is unsupported and disjoint search not a proof (3.364965ms)
-✔ 07: exact six unique lane edges and no reversal/duplication (539.095497ms)
-✔ 08: full is fixed 12, partial never redefines baseline or adds forbidden reachability (90.743506ms)
-✔ 09: bridge projection union counts identical footprint once (0.397886ms)
-✔ 10: set difference added/removed/retained and nonrectangular area (1.209833ms)
-✔ 11: holes and overflow not clipped out of total (493.589921ms)
-✔ 12: area cap cannot silently delete OD (86.214825ms)
-✔ 13: preferences retain hard constraints and candidate geometry (177.458858ms)
-✔ 14: deterministic reload and immutable input (169.754263ms)
-✔ 15: analytical endpoint tangent continuity for every route (240.900953ms)
-✔ 16: refinement bound decreases and measured area converges (3.862653ms)
-✔ 17: rotation preserves metrics within numerical tolerance (169.156827ms)
-✔ 18: invalid rings, exclusions, selected crossing, schema rejected (5.966093ms)
-✔ 19: no unconditional PASS with unassessed height/levels and no game apply (86.328867ms)
-✔ 20: all UI message entries have Chinese and English (0.278603ms)
-✔ 21: JSON own fields matching prototype names are unsupported (6.117379ms)
-✔ 22: OD and separate split statuses do not hide each other's diagnostics (76.890471ms)
-ℹ tests 22
+✔ 01: input limits and unsupported domain are explicit (25.741132ms)
+✔ 02: stationary and zero-length curves rejected (0.606236ms)
+✔ 03: arc station is metres, local tangent is analytical (0.429339ms)
+✔ 04: skew intersection keeps nonorthogonal original curves (402.371362ms)
+✔ 05: multi-crossings require explicit selection; choose second (223.364875ms)
+✔ 06: near tangent is unsupported and disjoint search not a proof (3.542166ms)
+✔ 07: exact six unique lane edges and no reversal/duplication (582.809979ms)
+✔ 08: full is fixed 12, partial never redefines baseline or adds forbidden reachability (88.668136ms)
+✔ 09: bridge projection union counts identical footprint once (0.573476ms)
+✔ 10: set difference added/removed/retained and nonrectangular area (1.470505ms)
+✔ 11: holes and overflow not clipped out of total (508.491201ms)
+✔ 12: area cap cannot silently delete OD (88.570163ms)
+✔ 13: preferences retain hard constraints and candidate geometry (181.38852ms)
+✔ 14: deterministic reload and immutable input (175.040061ms)
+✔ 15: analytical endpoint tangent continuity for every route (246.571767ms)
+✔ 16: refinement bound decreases and measured area converges (4.006518ms)
+✔ 17: rotation preserves metrics within numerical tolerance (172.578051ms)
+✔ 18: invalid rings, exclusions, selected crossing, schema rejected (6.041693ms)
+✔ 19: no unconditional PASS with unassessed height/levels and no game apply (89.939762ms)
+✔ 20: all UI message entries have Chinese and English (0.248527ms)
+✔ 21: JSON own fields matching prototype names are unsupported (6.612393ms)
+✔ 22: OD and separate split statuses do not hide each other's diagnostics (74.291608ms)
+✔ 23: out-of-range anchors leave the lane experiment NOT_RUN (71.405457ms)
+ℹ tests 23
 ℹ suites 0
-ℹ pass 22
+ℹ pass 23
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 2867.412481
+ℹ duration_ms 3053.993179

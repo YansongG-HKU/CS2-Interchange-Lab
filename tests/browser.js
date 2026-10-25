@@ -358,6 +358,29 @@ try {
   await page.locator("#reset").click();
   await ready();
   await page.locator("#lang").click();
+  await page.locator("#anchor").fill("300");
+  await page.locator("#anchor").press("Tab");
+  await ready();
+  await page.locator('[data-candidate="d1"]').click();
+  check(
+    "out-of-range lane experiment English NOT_RUN",
+    true,
+    (await page.locator("#split-status").textContent()).includes("NOT_RUN"),
+  );
+  check(
+    "unrun lane experiment has no connectors",
+    0,
+    await page.locator("#split polyline").count(),
+  );
+  await page.locator("#lang").click();
+  check(
+    "out-of-range lane experiment Chinese NOT_RUN",
+    true,
+    (await page.locator("#split-status").textContent()).includes("未运行"),
+  );
+  await page.locator("#reset").click();
+  await ready();
+  await page.locator("#lang").click();
   await page.setViewportSize({ width: 390, height: 844 });
   await checkLaneLabels("mobile en");
   await page.screenshot({

@@ -1,7 +1,7 @@
 {
   "version": "offline-0.1.0",
   "node": "v24.19.0",
-  "date": "2026-10-25T20:15:14.579Z",
+  "date": "2026-10-25T20:19:39.773Z",
   "requirementsHead": "bfccebe7467b2a8935306910b7763957ec98c207",
   "records": [
     {
@@ -103,7 +103,7 @@
       "expected": "NO_CANDIDATE_FOUND",
       "actual": "NO_CANDIDATE_FOUND",
       "pass": true,
-      "elapsedMs": 338.449755,
+      "elapsedMs": 359.807314,
       "crossings": [
         {
           "p": [
@@ -414,7 +414,7 @@
       "expected": "UNKNOWN",
       "actual": "UNKNOWN",
       "pass": true,
-      "elapsedMs": 80.19918899999999,
+      "elapsedMs": 73.10329000000002,
       "crossings": [
         {
           "p": [
@@ -639,7 +639,7 @@
       "expected": "INPUT_INVALID",
       "actual": "INPUT_INVALID",
       "pass": true,
-      "elapsedMs": 4.766983000000039,
+      "elapsedMs": 5.752597999999978,
       "crossings": [
         {
           "p": [
@@ -782,7 +782,7 @@
       "expected": "UNSUPPORTED",
       "actual": "UNSUPPORTED",
       "pass": true,
-      "elapsedMs": 5.500349000000028,
+      "elapsedMs": 6.088639000000001,
       "crossings": [
         {
           "p": [
@@ -907,7 +907,7 @@
       "expected": "NO_CANDIDATE_FOUND",
       "actual": "NO_CANDIDATE_FOUND",
       "pass": true,
-      "elapsedMs": 240.19807500000002,
+      "elapsedMs": 238.62075899999996,
       "crossings": [
         {
           "p": [
@@ -1278,7 +1278,7 @@
       "expected": "NO_CANDIDATE_FOUND",
       "actual": "NO_CANDIDATE_FOUND",
       "pass": true,
-      "elapsedMs": 285.52173500000004,
+      "elapsedMs": 288.42753099999993,
       "crossings": [
         {
           "p": [
@@ -1626,7 +1626,7 @@
       "expected": "UNSUPPORTED",
       "actual": "UNSUPPORTED",
       "pass": true,
-      "elapsedMs": 0.596416999999974,
+      "elapsedMs": 0.6625639999999748,
       "crossings": [],
       "diagnostics": [
         {

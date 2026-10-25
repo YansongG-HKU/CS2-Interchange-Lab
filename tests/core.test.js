@@ -276,3 +276,14 @@ test("22: OD and separate split statuses do not hide each other's diagnostics", 
   assert.equal(v.splitStatus, "CONSTRAINT_VIOLATION");
   assert.ok(v.splitDiagnostics.some((d) => d.code === "LANE_CROSSING"));
 });
+
+test("23: out-of-range anchors leave the lane experiment NOT_RUN", () => {
+  const c = defaultCase();
+  c.anchor = 300;
+  const r = solve(c);
+  const v = r.candidates.find((v) => v.id === "d1");
+  assert.ok(v.diagnostics.some((d) => d.code === "ANCHOR_RANGE"));
+  assert.equal(v.splitStatus, "NOT_RUN");
+  assert.deepEqual(v.splitDiagnostics, []);
+  assert.equal(v.lanePaths, undefined);
+});

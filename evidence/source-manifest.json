@@ -16,12 +16,12 @@
     "src/core/area.js": "c8b35d063552891269fc7e1876356eb67b4b387a2c1467b2bf7e076458f12cb2",
     "src/core/geometry.js": "929249c0356c319410f5ad6b60609e889e65d3c3dd3500280830c6fa994d22fa",
     "src/core/model.js": "7673729a8258d21bdf788f2fa614cd2e6ccf7b5340c5d0ca68292e5ec0dec9ee",
-    "src/core/solver.js": "d4bbb5038b66364ef05d9c0f10cc70941ae43842d7045eff1e125ac78129da36",
-    "src/i18n.js": "2f93646fa123b4a852945e34ba0d8b3785488dd9f619427c4f50697b3210d89b",
+    "src/core/solver.js": "fc4ca1c80eb7b34323dd0bdcc751deedc83df725a809f9108b22fdc8b6b66f7b",
+    "src/i18n.js": "7163b9e25b546b72926047ae49758278bc6a8ccfee9004e2721196aef20ff5f5",
     "src/style.css": "2ae797472ffd6ce04e00a6748ad61ddba5eb670315f550ccd16c3c77e05eefa4",
     "src/ui.js": "960dbe0a1182649513e73e66647b157063d5c5c4bf974433c58c47104b270918",
-    "tests/browser.js": "b07c424134ebb88ae219be725eaedab645ed412b1adaecffaf6df8d096de68ba",
-    "tests/core.test.js": "dd6362678252cf77db76bd64d2c35e84217b4c6ab1865627cb8d9bfd3c72f4dc",
+    "tests/browser.js": "75fae573150c188b6dbaa92d4ada054dddb592e5f01f3c8b7d28022cf39c980e",
+    "tests/core.test.js": "c8838ba1f75819fa64bf78c032c33708c5fdb3af48b7fa675f1af68f2537879e",
     "tests/evidence.js": "e8309aa3828b32770da24de013e6f8151ed4b2610035837db61bf1340cd3d2bd"
   }
 }

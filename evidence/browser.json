@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-25T20:15:12.227Z",
-  "sourceCommit": "a9cba2eac1502027628179ba394b926d00ac12d0",
+  "date": "2026-10-25T20:19:37.439Z",
+  "sourceCommit": "ca01653a5a3fa7894a72dde88993fa5b94c2ab11",
   "workingTree": "implementation under test; final source hash in manifest",
   "browser": "154.0.8037.57",
   "checks": [
@@ -291,6 +291,21 @@
     },
     {
       "name": "lane state reports its own violation",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "out-of-range lane experiment English NOT_RUN",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "unrun lane experiment has no connectors",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "out-of-range lane experiment Chinese NOT_RUN",
       "expected": true,
       "actual": true
     },

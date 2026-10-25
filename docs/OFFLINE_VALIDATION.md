@@ -4,8 +4,8 @@ See [runtime and support domain](OFFLINE_DEMO.md). Requirements base: `bfccebe74
 
 ## Actual evidence / 实测证据
 
-- [Unit/property/regression output](../evidence/unit-tests.txt): 22 assertions grouped as Node tests, including degeneracy, limits, fixed OD, G1, unions/differences, area/overflow, rotation, reload and unavailable adapter.
-- [Real browser record](../evidence/browser.json): 78 Chromium interaction assertions, Chinese/English, geometry-invariant locale switch, fractional input, undo, preset, JSON download/import, second intersection selection, near tangent, area cap, overflow, error location, malformed/null JSON, empty numeric input, recovery and narrow layout.
+- [Unit/property/regression output](../evidence/unit-tests.txt): 23 assertions grouped as Node tests, including degeneracy, limits, fixed OD, G1, unions/differences, area/overflow, rotation, reload and unavailable adapter.
+- [Real browser record](../evidence/browser.json): 81 Chromium interaction assertions, Chinese/English, geometry-invariant locale switch, fractional input, undo, preset, JSON download/import, second intersection selection, near tangent, area cap, overflow, error location, malformed/null JSON, empty numeric input, recovery and narrow layout.
 - [Fixture computations](../evidence/computation.json): complete inputs, expected and observed statuses, candidate diagnostics, OD, area, timings and 128/256 refinement differences. These timings are this machine's observations, not a responsiveness guarantee.
 - [Build output](../evidence/build.txt): production build; examples copied into distribution.
 - Screenshots: [中文](../evidence/browser-zh.png), [English overflow](../evidence/browser-overflow-en.png), [narrow English](../evidence/browser-mobile-en.png), [窄屏中文](../evidence/browser-mobile-zh.png).
@@ -40,3 +40,5 @@ Desktop and 390px zh/en checks assert six readable, nonoverlapping labels (font 
 Playwright intercepts actual fixture fetches and deliberately releases older responses last. It separately tests late fetch after reset, numeric edit and language change. A controlled `File.text()` promise exercised by the actual file input resolves after reset; it cannot replace the reset model. Tests additionally assert OD UNKNOWN and independent fork CONSTRAINT_VIOLATION coexist without hiding the lane warning.
 
 验证：22 项核心测试、78 项真实浏览器断言、7 案例预期/实测检查、生产构建；完整游戏与 CI 仍 NOT_RUN。输入、支持域和计算几何不扩大。
+
+Final boundary regression: anchor=300m makes candidate d1 fail ANCHOR_RANGE; its lane experiment is NOT_RUN, has no connector geometry, and displays 未运行 / NOT_RUN in both languages. Final totals: 23 core tests, 81 browser assertions; seven fixtures and build pass. / 前置条件失败不是 UNKNOWN 检查完成。

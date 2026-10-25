@@ -157,6 +157,8 @@ export function solve(x) {
         id,
         status: "CONSTRAINT_VIOLATION",
         diagnostics: [fail("ANCHOR_RANGE", "anchor", { point: hit.p })],
+        splitStatus: "NOT_RUN",
+        splitDiagnostics: [],
       });
       continue;
     }

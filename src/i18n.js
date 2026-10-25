@@ -145,6 +145,7 @@ export const messages = {
     "接入弧长超出输入道路；延长道路或缩短接入",
     "Anchor outside source road; extend road or reduce distance",
   ],
+  NOT_RUN: ["未运行：前置条件未满足", "NOT_RUN: prerequisites not met"],
   UNKNOWN: [
     "未知：本实验仍有未验证项",
     "UNKNOWN: unverified checks in this experiment",

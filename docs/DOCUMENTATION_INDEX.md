@@ -86,3 +86,5 @@ New source/tests/examples and three new docs reviewed for matching version/schem
 已重新检查全部受版本控制文档。更新 README、CHANGELOG、OFFLINE_DEMO、OFFLINE_VALIDATION、UX_AND_I18N 及本索引：字段白名单、加载代次、标签交互、独立实验状态和实际测试数量。刷新 evidence 的源哈希/输入实测/构建记录及四张截图（新增 [窄屏中文](../evidence/browser-mobile-zh.png)）。
 
 其余全部文档无需修改：AGENTS/CONTRIBUTING/DEVELOPMENT/RIGHTS/THIRD_PARTY 与 Issue/PR 模板的工作流、权利和依赖不变；DESIGN_REQUIREMENTS/GEOMETRY_AND_LANES/CURVED_SITE_OPTIMIZATION/REQUIREMENTS_ACCEPTANCE/VALIDATION/ROAD_RULES/ROADMAP/COMPATIBILITY/REALISM_AND_GAMEPLAY/EXPERIMENT_TEMPLATE/SOURCES 的支持域、数学/游戏边界和完整验收要求不变，当前离线证据仍由既有链接提供；七份 research 仍保留历史来源。不是新增游戏功能、交通或三维验证，也不扩展一期完成声明。
+
+最后边界修复仅更新 OFFLINE_DEMO、OFFLINE_VALIDATION、CHANGELOG、本索引及源哈希/测试/构建证据：ANCHOR_RANGE 提前退出时车道实验为 NOT_RUN。其余文档已复核沿用上一轮无需修改理由，支持域、面积、依赖及游戏状态不变。 / Final boundary fix records NOT_RUN and refreshed evidence only.
