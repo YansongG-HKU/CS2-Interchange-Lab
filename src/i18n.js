@@ -1,4 +1,14 @@
 export const messages = {
+  odState: ["OD 候选状态", "OD candidate status"],
+  laneHelp: [
+    "选择车道标签，在图中高亮对应计算连接（白色粗线）。",
+    "Select a lane label to highlight its computed connector (thick white line).",
+  ],
+  splitState: ["独立车道实验状态", "Separate lane experiment status"],
+  loadFailed: [
+    "读取案例失败；保留原输入，请重试。",
+    "Case load failed; previous input retained. Retry the load.",
+  ],
   title: ["立交实验室 · 游戏外二维 Demo", "Interchange Lab · Offline 2D demo"],
   intro: [
     "调整参数 → 选交会 → 检查候选 → 保存案例。单位为米；所有默认值都是实验参数。",
@@ -97,8 +107,8 @@ export const messages = {
   ],
   diagnostics: ["诊断（点击定位）", "Diagnostics (click to locate)"],
   none: [
-    "无已检出的二维硬冲突；未验证项仍阻止通过。",
-    "No detected 2D hard violation; unverified checks still prevent PASS.",
+    "当前视图无列出的诊断；未验证项仍阻止通过。",
+    "No listed diagnostic in this view; unverified checks still prevent PASS.",
   ],
   running: ["计算中，旧结果已失效…", "Computing; previous result is stale…"],
   INPUT_INVALID: [
@@ -135,7 +145,10 @@ export const messages = {
     "接入弧长超出输入道路；延长道路或缩短接入",
     "Anchor outside source road; extend road or reduce distance",
   ],
-  UNKNOWN: ["未知：仅二维预检", "UNKNOWN: 2D precheck only"],
+  UNKNOWN: [
+    "未知：本实验仍有未验证项",
+    "UNKNOWN: unverified checks in this experiment",
+  ],
   CONSTRAINT_VIOLATION: ["当前候选违反约束", "Candidate violates constraints"],
   invalidJSON: [
     "JSON 解析失败；保留原输入，请修正格式",

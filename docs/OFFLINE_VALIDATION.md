@@ -1,14 +1,14 @@
 # 离线验证记录 / Offline validation record
 
-See [runtime and support domain](OFFLINE_DEMO.md). Requirements base: `bfccebe7467b2a8935306910b7763957ec98c207`. Tests execute the source identified by SHA-256 in [source manifest](../evidence/source-manifest.json); the browser record's `sourceCommit` identifies the pre-implementation checkout parent, **not an assertion that dirty implementation existed in that commit**. The final Git head is reported in the PR and delivery message. / 精确源文件哈希绑定被测实现，避免自引用提交哈希。
+See [runtime and support domain](OFFLINE_DEMO.md). Requirements base: `bfccebe7467b2a8935306910b7763957ec98c207`. Tests execute the source identified by SHA-256 in [source manifest](../evidence/source-manifest.json); the browser record's `sourceCommit` identifies the checkout parent before the current tested edits, **not an assertion that dirty implementation existed in that commit**. The final Git head is reported in the PR and delivery message. / 精确源文件哈希绑定被测实现，避免自引用提交哈希。
 
 ## Actual evidence / 实测证据
 
-- [Unit/property/regression output](../evidence/unit-tests.txt): 20 assertions grouped as Node tests, including degeneracy, limits, fixed OD, G1, unions/differences, area/overflow, rotation, reload and unavailable adapter.
-- [Real browser record](../evidence/browser.json): 23 Chromium interaction assertions, Chinese/English, geometry-invariant locale switch, fractional input, undo, preset, JSON download/import, second intersection selection, near tangent, area cap, overflow, error location, malformed/null JSON, empty numeric input, recovery and narrow layout.
+- [Unit/property/regression output](../evidence/unit-tests.txt): 22 assertions grouped as Node tests, including degeneracy, limits, fixed OD, G1, unions/differences, area/overflow, rotation, reload and unavailable adapter.
+- [Real browser record](../evidence/browser.json): 78 Chromium interaction assertions, Chinese/English, geometry-invariant locale switch, fractional input, undo, preset, JSON download/import, second intersection selection, near tangent, area cap, overflow, error location, malformed/null JSON, empty numeric input, recovery and narrow layout.
 - [Fixture computations](../evidence/computation.json): complete inputs, expected and observed statuses, candidate diagnostics, OD, area, timings and 128/256 refinement differences. These timings are this machine's observations, not a responsiveness guarantee.
 - [Build output](../evidence/build.txt): production build; examples copied into distribution.
-- Screenshots: [中文](../evidence/browser-zh.png), [English overflow](../evidence/browser-overflow-en.png), [narrow English](../evidence/browser-mobile-en.png).
+- Screenshots: [中文](../evidence/browser-zh.png), [English overflow](../evidence/browser-overflow-en.png), [narrow English](../evidence/browser-mobile-en.png), [窄屏中文](../evidence/browser-mobile-zh.png).
 - [Export/reload fixture](../evidence/exported-case.json).
 
 Node 24.19.0, npm 11.9.0. Exact package pins and integrity in package-lock.json; browser version in browser.json. No game build/Mod version exists for this experiment. / 未安装游戏或 Mod，不虚构版本。
@@ -30,3 +30,13 @@ Initial browser run exposed an asynchronous fixture-loading race in the **test w
 These are **partial offline subcases**, not acceptance of the full A01–A40 suite. All game compatibility rows remain NOT_TESTED. / 仅离线子项通过，不把 40 个需求全标 PASS。
 
 CI: no workflow has been added or executed by this change. Local `npm test`, browser and build success is **not CI success**. / 没有把本地测试冒称 CI 通过。
+
+## Review regression / 审查回归
+
+Added own-key schema regression (`constructor`, `toString`, `__proto__`, `hasOwnProperty`, ordinary extra key), plus real JSON file import rejection and unchanged previous input/result in both locales. This is a validation bug fix, not evidence of code execution/prototype pollution.
+
+Desktop and 390px zh/en checks assert six readable, nonoverlapping labels (font >=14px), select each of the six actual connectors, and verify selection preserves the complete computation. Screenshots were refreshed and visually inspected.
+
+Playwright intercepts actual fixture fetches and deliberately releases older responses last. It separately tests late fetch after reset, numeric edit and language change. A controlled `File.text()` promise exercised by the actual file input resolves after reset; it cannot replace the reset model. Tests additionally assert OD UNKNOWN and independent fork CONSTRAINT_VIOLATION coexist without hiding the lane warning.
+
+验证：22 项核心测试、78 项真实浏览器断言、7 案例预期/实测检查、生产构建；完整游戏与 CI 仍 NOT_RUN。输入、支持域和计算几何不扩大。

@@ -15,13 +15,14 @@ import {
   unit,
 } from "./geometry.js";
 import { union, ribbon, metrics, area, difference, intersect } from "./area.js";
+const INPUT_KEYS = new Set(Object.keys(defaultCase()));
 const fail = (code, path, values = {}) => ({ code, path, ...values });
 export function validate(x) {
   const errors = [];
   const bad = (path) => errors.push(fail("INPUT_INVALID", path));
   if (!x || typeof x !== "object") return [fail("INPUT_INVALID", "$")];
   for (const key of Object.keys(x))
-    if (!(key in defaultCase())) errors.push(fail("UNSUPPORTED", key));
+    if (!INPUT_KEYS.has(key)) errors.push(fail("UNSUPPORTED", key));
   if (typeof x.name !== "string" || x.name.length > 100) bad("name");
   if (x.schema !== 1 || x.solver !== VERSION)
     errors.push(fail("UNSUPPORTED", "schema/solver"));
@@ -248,6 +249,7 @@ export function solve(x) {
       status: diag.length ? "CONSTRAINT_VIOLATION" : "UNKNOWN",
       diagnostics: diag,
       splitDiagnostics,
+      splitStatus: splitDiagnostics.length ? "CONSTRAINT_VIOLATION" : "UNKNOWN",
       routes,
       lanePaths,
       graph,

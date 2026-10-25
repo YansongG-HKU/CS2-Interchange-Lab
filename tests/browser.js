@@ -23,6 +23,87 @@ const ready = async () => {
       window.labSnapshot && JSON.parse(window.labSnapshot()).result !== null,
   );
 };
+async function checkLaneLabels(context) {
+  const before = await snapshot();
+  check(
+    `${context}: all six labels`,
+    ["L1 → M1", "L2 → M2", "L3 → M3", "L4 → M4", "L5 → R1", "L6 → R2"],
+    await page.locator("[data-lane]").allTextContents(),
+  );
+  const layout = await page.locator("[data-lane]").evaluateAll((nodes) =>
+    nodes.map((n) => {
+      const r = n.getBoundingClientRect();
+      return {
+        x: r.x,
+        y: r.y,
+        w: r.width,
+        h: r.height,
+        font: parseFloat(getComputedStyle(n).fontSize),
+        fits: n.scrollWidth <= n.clientWidth,
+      };
+    }),
+  );
+  check(
+    `${context}: labels readable and nonoverlapping`,
+    true,
+    layout.every(
+      (a, i) =>
+        a.font >= 14 &&
+        a.fits &&
+        layout.every(
+          (b, j) =>
+            i === j ||
+            a.x + a.w <= b.x ||
+            b.x + b.w <= a.x ||
+            a.y + a.h <= b.y ||
+            b.y + b.h <= a.y,
+        ),
+    ),
+  );
+  for (const lane of ["L1", "L2", "L3", "L4", "L5", "L6"]) {
+    await page.locator(`[data-lane="${lane}"]`).click();
+    check(
+      `${context}: ${lane} selects its connector`,
+      lane,
+      await page
+        .locator('#split polyline[stroke="#ffffff"]')
+        .getAttribute("data-lane-path"),
+    );
+  }
+  check(
+    `${context}: selection does not change computations`,
+    before,
+    await snapshot(),
+  );
+}
+async function importOwnFields(context) {
+  const before = await snapshot();
+  for (const key of ["constructor", "toString", "__proto__"]) {
+    const raw = JSON.stringify(before.model).replace(
+      "{",
+      `{${JSON.stringify(key)}:{},`,
+    );
+    await page.locator("#import").setInputFiles({
+      name: `${key}.json`,
+      mimeType: "application/json",
+      buffer: Buffer.from(raw),
+    });
+    await page.waitForFunction(
+      (key) => document.querySelector("#status").textContent.includes(key),
+      key,
+    );
+    check(
+      `${context}: rejects imported ${key}`,
+      true,
+      (await page.locator("#status").textContent()).includes(key),
+    );
+    check(
+      `${context}: ${key} preserves previous input/result`,
+      before,
+      await snapshot(),
+    );
+  }
+}
 try {
   await page.goto("http://127.0.0.1:4173");
   await ready();
@@ -37,6 +118,10 @@ try {
     true,
     (await page.locator("#plan polyline").count()) > 5,
   );
+  await checkLaneLabels("desktop zh");
+  await importOwnFields("zh");
+  await page.locator("#recompute").click();
+  await ready();
   await page.screenshot({ path: "evidence/browser-zh.png", fullPage: true });
   await page.locator("#lang").click();
   let b = await snapshot();
@@ -46,6 +131,8 @@ try {
     true,
     (await page.locator("h1").textContent()).includes("Offline"),
   );
+  await checkLaneLabels("desktop en");
+  await importOwnFields("en");
   await page.locator("#example").selectOption("partial");
   await page.waitForFunction(
     (name) => JSON.parse(window.labSnapshot()).model.name === name,
@@ -178,7 +265,101 @@ try {
   await page.locator("#undo").click();
   await ready();
   check("recover from invalid input", 80, (await snapshot()).model.anchor);
+  // Hold real fetch responses and deliver older requests last.
+  const pending = new Map();
+  await page.route("**/examples/*.json", (route) => {
+    pending.set(
+      route.request().url().split("/").at(-1).replace(".json", ""),
+      route,
+    );
+  });
+  async function begin(name) {
+    await page.locator("#example").selectOption(name);
+    while (!pending.has(name)) await page.waitForTimeout(10);
+  }
+  async function release(name) {
+    await pending.get(name).fulfill({
+      contentType: "application/json",
+      body: fs.readFileSync(`examples/${name}.json`, "utf8"),
+    });
+    pending.delete(name);
+    await page.waitForTimeout(100);
+  }
+  await begin("multiple");
+  await begin("partial");
+  await release("partial");
+  await ready();
+  const newest = await snapshot();
+  await release("multiple");
+  check(
+    "inverse fetch order preserves later selection",
+    newest,
+    await snapshot(),
+  );
+  for (const action of ["reset", "edit", "language"]) {
+    await begin("multiple");
+    if (action === "reset") {
+      await page.locator("#reset").click();
+      await ready();
+    }
+    if (action === "edit") {
+      await page.locator("#anchor").fill("91");
+      await page.locator("#anchor").press("Tab");
+      await ready();
+    }
+    if (action === "language") await page.locator("#lang").click();
+    const current = await snapshot();
+    await release("multiple");
+    check(`late fetch cannot overwrite ${action}`, current, await snapshot());
+  }
+  // Hold File.text() after the real file-input interaction; reset before completion.
+  await page.evaluate(() => {
+    window.originalFileText = File.prototype.text;
+    File.prototype.text = function () {
+      return new Promise((resolve) => {
+        window.releaseImport = async () =>
+          resolve(await window.originalFileText.call(this));
+      });
+    };
+  });
+  await page.locator("#import").setInputFiles("examples/partial.json");
+  await page.waitForFunction(() => typeof window.releaseImport === "function");
+  await page.locator("#reset").click();
+  await ready();
+  const reset = await snapshot();
+  await page.evaluate(() => window.releaseImport());
+  await page.waitForTimeout(100);
+  check("late file read cannot overwrite reset", reset, await snapshot());
+  await page.evaluate(() => {
+    File.prototype.text = window.originalFileText;
+  });
+  await page.unroute("**/examples/*.json");
+  // Explicitly separate OD and local-fork states on a supported conflicting fork.
+  const conflict = (await snapshot()).model;
+  conflict.anchor = 10;
+  conflict.handle = 100;
+  conflict.required = conflict.required.filter(
+    (m) => m.split(">")[0] === m.split(">")[1],
+  );
+  await page.locator("summary").click();
+  await page.locator("#json").fill(JSON.stringify(conflict));
+  await page.locator("#applyJSON").click();
+  await ready();
+  check(
+    "OD status remains independent",
+    "UNKNOWN",
+    (await snapshot()).result.status,
+  );
+  check(
+    "lane state reports its own violation",
+    true,
+    (await page.locator("#split-status").textContent()).includes("违反"),
+  );
+  await page.locator("#reset").click();
+  await ready();
+  await page.locator("#lang").click();
   await page.setViewportSize({ width: 390, height: 844 });
+  await checkLaneLabels("mobile en");
   await page.screenshot({
     path: "evidence/browser-mobile-en.png",
     fullPage: true,
@@ -190,6 +371,12 @@ try {
       () => document.documentElement.scrollWidth <= innerWidth,
     ),
   );
+  await page.locator("#lang").click();
+  await checkLaneLabels("mobile zh");
+  await page.screenshot({
+    path: "evidence/browser-mobile-zh.png",
+    fullPage: true,
+  });
   check("browser console uncaught errors", [], errors);
   fs.writeFileSync(
     "evidence/browser.json",
@@ -214,6 +401,7 @@ try {
           "browser-zh.png",
           "browser-overflow-en.png",
           "browser-mobile-en.png",
+          "browser-mobile-zh.png",
         ],
       },
       null,

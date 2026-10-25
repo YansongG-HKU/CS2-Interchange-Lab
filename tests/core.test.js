@@ -242,3 +242,37 @@ test("20: all UI message entries have Chinese and English", () => {
     );
   }
 });
+
+test("21: JSON own fields matching prototype names are unsupported", () => {
+  for (const key of [
+    "constructor",
+    "toString",
+    "__proto__",
+    "hasOwnProperty",
+    "unexpected",
+  ]) {
+    const c = JSON.parse(
+      JSON.stringify(defaultCase()).replace("{", `{${JSON.stringify(key)}:{},`),
+    );
+    assert.ok(Object.hasOwn(c, key));
+    const r = solve(c);
+    assert.equal(r.status, "UNSUPPORTED");
+    assert.ok(
+      r.diagnostics.some((d) => d.code === "UNSUPPORTED" && d.path === key),
+    );
+  }
+  assert.deepEqual(validate(defaultCase()), []);
+});
+
+test("22: OD and separate split statuses do not hide each other's diagnostics", () => {
+  const c = defaultCase();
+  c.anchor = 10;
+  c.handle = 100;
+  c.required = FULL.filter((m) => m.split(">")[0] === m.split(">")[1]);
+  const r = solve(c);
+  assert.equal(r.status, "UNKNOWN");
+  const v = r.candidates.find((c) => c.splitDiagnostics.length);
+  assert.equal(v.status, "UNKNOWN");
+  assert.equal(v.splitStatus, "CONSTRAINT_VIOLATION");
+  assert.ok(v.splitDiagnostics.some((d) => d.code === "LANE_CROSSING"));
+});

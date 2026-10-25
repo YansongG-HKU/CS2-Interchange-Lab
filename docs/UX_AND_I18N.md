@@ -63,3 +63,5 @@
 
 ## 场地预设与候选比较 / Site presets and alternatives
 城区/郊区/自定义只设置透明偏好；独立显示硬边界、禁建洞、面积口径、层数与高度基准。用同尺度平面图、纵断面、全部指标及冲突位置比较有限候选，不凑数、不静默放宽。新术语同时中英：紧凑Compact、展开Spread-out、少堆叠Fewer stacked levels、预留包络Reservation envelope、越界面积Overflow area、未找到可行解No feasible candidate found。
+
+离线审查修复：六车道使用响应式标签选择对应曲线，中文/英文及窄屏实测；旧异步加载不能覆盖新的选择/重置/编辑/语言意图。OD 与独立车道实验分别显示状态。 / Offline labels are responsive/selectable; stale loads cannot overwrite newer intent; OD and lane experiments report separate states. See [validation](OFFLINE_VALIDATION.md).

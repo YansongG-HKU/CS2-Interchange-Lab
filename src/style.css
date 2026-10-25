@@ -183,3 +183,23 @@ pre {
     min-height: 330px;
   }
 }
+
+.lane-legend {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 12px 0;
+}
+.lane-legend button {
+  font-size: 15px;
+  min-height: 44px;
+}
+.lane-legend button[aria-pressed="true"] {
+  outline: 2px solid #fff;
+  background: #34536b;
+}
+@media (max-width: 650px) {
+  .lane-legend {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

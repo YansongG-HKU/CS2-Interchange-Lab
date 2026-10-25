@@ -80,3 +80,9 @@
 | .gitignore | Updated: exclude generated dist; no game/private data added / 构建产物忽略 |
 
 New source/tests/examples and three new docs reviewed for matching version/schema, dependency rights, no secrets/game assets and accurate partial support. No .agents/skills exists in this checkout or readable workspace .agents directory. Existing unrelated workspace repositories were not modified. / 不修改其他仓库。
+
+## 2026-10-25 UTC — 审查修复影响复核 / Review-fix impact review
+
+已重新检查全部受版本控制文档。更新 README、CHANGELOG、OFFLINE_DEMO、OFFLINE_VALIDATION、UX_AND_I18N 及本索引：字段白名单、加载代次、标签交互、独立实验状态和实际测试数量。刷新 evidence 的源哈希/输入实测/构建记录及四张截图（新增 [窄屏中文](../evidence/browser-mobile-zh.png)）。
+
+其余全部文档无需修改：AGENTS/CONTRIBUTING/DEVELOPMENT/RIGHTS/THIRD_PARTY 与 Issue/PR 模板的工作流、权利和依赖不变；DESIGN_REQUIREMENTS/GEOMETRY_AND_LANES/CURVED_SITE_OPTIMIZATION/REQUIREMENTS_ACCEPTANCE/VALIDATION/ROAD_RULES/ROADMAP/COMPATIBILITY/REALISM_AND_GAMEPLAY/EXPERIMENT_TEMPLATE/SOURCES 的支持域、数学/游戏边界和完整验收要求不变，当前离线证据仍由既有链接提供；七份 research 仍保留历史来源。不是新增游戏功能、交通或三维验证，也不扩展一期完成声明。

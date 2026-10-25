@@ -69,4 +69,4 @@ npm run test:browser
 npm run build
 ```
 
-打开本机 `http://127.0.0.1:4173`。可以改参数、选交会、检查真实计算、切换中英和导入导出 JSON。默认 full 案例有紧转向风险；partial 案例二维检查无已知冲突仍为 UNKNOWN。三维、完整结构面积、游戏路径与兼容性均未验证。 / Open the loopback URL on the same machine. Edit, select crossings, inspect computed candidates, switch locale, import/export JSON. Full fixture exposes tight-turn failures; partial remains UNKNOWN pending structural/game checks. No public preview deployment or game release.
+打开本机 `http://127.0.0.1:4173`。可以改参数、选交会、检查真实计算、切换中英和导入导出 JSON。默认 full 案例有紧转向风险；partial 案例 OD 候选仍为 UNKNOWN；独立车道实验另显示自身状态，不能据此推断所有二维检查均无冲突。三维、完整结构面积、游戏路径与兼容性均未验证。 / Open the loopback URL on the same machine. Edit, select crossings, inspect computed candidates, switch locale, import/export JSON. Full fixture exposes tight-turn failures; partial OD remains UNKNOWN; the separate lane experiment reports its own state. No public preview deployment or game release.

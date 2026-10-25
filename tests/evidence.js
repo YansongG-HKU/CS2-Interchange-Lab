@@ -32,6 +32,7 @@ for (const [name, status] of Object.entries(expected)) {
       status: c.status,
       diagnostics: c.diagnostics,
       splitDiagnostics: c.splitDiagnostics,
+      splitStatus: c.splitStatus,
       land: c.land,
       od: c.od,
       positionBound: c.positionBound,

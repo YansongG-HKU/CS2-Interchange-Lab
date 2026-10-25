@@ -16,12 +16,12 @@
     "src/core/area.js": "c8b35d063552891269fc7e1876356eb67b4b387a2c1467b2bf7e076458f12cb2",
     "src/core/geometry.js": "929249c0356c319410f5ad6b60609e889e65d3c3dd3500280830c6fa994d22fa",
     "src/core/model.js": "7673729a8258d21bdf788f2fa614cd2e6ccf7b5340c5d0ca68292e5ec0dec9ee",
-    "src/core/solver.js": "b365da3d37808e725d7db8626517e021ee21ef9d6aad3d1255d95bc11abdc0e5",
-    "src/i18n.js": "74c0c03978bebae060ec916e8e50b741b586b09aad7f82e9dda381431a3e0cec",
-    "src/style.css": "60316a11b2d40ca6a30682a0ce3dee18d8b4eca332288e90d5d3c0775689d258",
-    "src/ui.js": "e3485f9cbe84bf265e5669316231689adc75b2bbdd79f053363e3849afb07fac",
-    "tests/browser.js": "24ecc830a4f48ce22f198eeffaa00e8b9483060d907c308d8c63da7b84529139",
-    "tests/core.test.js": "ebf2476cbd3e9e0a394399f4f6631e29448a5e21b3c303fe57700b74dc60b80e",
-    "tests/evidence.js": "406dc1b2d1815ba391aa23ba1e9c344d9ed0242b631fd46e2a2dcea4c95fc866"
+    "src/core/solver.js": "d4bbb5038b66364ef05d9c0f10cc70941ae43842d7045eff1e125ac78129da36",
+    "src/i18n.js": "2f93646fa123b4a852945e34ba0d8b3785488dd9f619427c4f50697b3210d89b",
+    "src/style.css": "2ae797472ffd6ce04e00a6748ad61ddba5eb670315f550ccd16c3c77e05eefa4",
+    "src/ui.js": "960dbe0a1182649513e73e66647b157063d5c5c4bf974433c58c47104b270918",
+    "tests/browser.js": "b07c424134ebb88ae219be725eaedab645ed412b1adaecffaf6df8d096de68ba",
+    "tests/core.test.js": "dd6362678252cf77db76bd64d2c35e84217b4c6ab1865627cb8d9bfd3c72f4dc",
+    "tests/evidence.js": "e8309aa3828b32770da24de013e6f8151ed4b2610035837db61bf1340cd3d2bd"
   }
 }

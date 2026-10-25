@@ -65,8 +65,18 @@ For n uniform Bézier parameter intervals, centreline linear interpolation devia
 - `UNSUPPORTED`: unsupported schema/type, stationary/self-crossing source or near-tangency / 不支持版本/道路/退化几何。
 - `CONSTRAINT_VIOLATION`: specific candidate's known planar conflict / 候选已知二维冲突。
 - `NO_CANDIDATE_FOUND`: bounded search failed / 有限候选未命中，**not PROVEN_INFEASIBLE**。
-- `UNKNOWN`: no detected 2D conflict but incomplete checks / 未检出二维冲突，仍有未知项。
+- `UNKNOWN`: the named experiment has incomplete checks; OD candidate status does not cover the separate lane experiment. `splitStatus` and `splitDiagnostics` report the fork independently. / 指定实验仍有未验证项；OD 候选状态不覆盖独立车道实验，后者另列状态及诊断。
 
 Default full skew fixture deliberately exposes two tight-turn offset risks. The partial fixture provides a usable interactive numerical loop while retaining UNKNOWN for structure/game checks. Deferred: certified offset sweeps, integrated full lane-level interchange, merge/drop policies, arbitrary/close curves, terrain/vertical/3D, dragging and layered views, unit display switching, gameplay lifecycle, free-flow/control assignment, traffic capacity and true local stacking. No Apply, game save editing, Mod integration or game release is implemented. / 延期项目不伪装完成。
 
 Rollback: delete the independent checkout or revert this feature branch; there are no game/save/database migrations. Source branches and unrelated repositories stay untouched. / 可删除独立目录或回滚分支，无游戏/数据库副作用。
+
+## Review fixes / 审查修正
+
+The schema accepts only its own named fields via a frozen `Set(Object.keys(defaultCase()))`. JSON own keys named `constructor`, `toString`, `__proto__` and other non-schema names are rejected as UNSUPPORTED. This fixes a validation-contract mismatch; no execution or prototype-pollution exploit has been established. / 严格自有字段白名单，修复契约偏差，不夸大为已证实安全漏洞。
+
+Lane labels are a responsive HTML list instead of overlapping text at tightly spaced curve origins. Each label selects the corresponding thick white computed connector without changing inputs or results; all six mappings remain readable at 390px in both languages. / 标签与图形联动，独立实验仍不计入 OD 面积。
+
+File reads and example fetches share an input-request revision. A newer load, reset, recompute, undo, direct JSON submission, numeric/JSON typing, lane selection or language change invalidates older loads; rejected stale completions cannot change the model or diagnostics. Language changes cancel pending loads but preserve already computed geometry. / 统一加载代次，新的用户意图使旧请求失效；语言切换保留已有计算结果。
+
+A through-only case with anchor=10m and handle=100m demonstrates separate statuses: OD candidate UNKNOWN while local lane connectors produce CONSTRAINT_VIOLATION. Neither is summarized as all planar checks passed. / 两实验分开报告，不互相掩盖诊断。
