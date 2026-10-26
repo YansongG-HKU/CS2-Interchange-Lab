@@ -1,6 +1,8 @@
 # 第一阶段设计需求 / Phase 1 Design Requirements
 
-状态 / Status: **DRAFT — requirements only; not implemented or game-tested.**
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 有限游戏外二维/三维及纵断面子集已经实现，完整一期与游戏门禁尚未通过。 / A bounded offline plan/3D/profile subset is implemented; full phase/game gates are not accepted. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
+状态 / Status: **DRAFT — full requirements; bounded offline subset implemented separately; not game-tested.**
 
 本阶段是业余研究项目的需求基线，不是承诺完成全自动立交生成器。中文与英文从首阶段并列支持。 / This is a hobby research requirements baseline, not a claim of a working automatic interchange generator. Chinese and English are first-phase requirements.
 
@@ -57,3 +59,18 @@ Apply之前重新读取源道路ID、版本、依赖和用户编辑状态，与�
 
 ## 两曲线与用地核心扩展 / Curved-site core requirements
 R21–R26在 [场地优化契约](CURVED_SITE_OPTIMIZATION.md) 中定义：曲线×曲线、可用地块/禁建区、城区/郊区预设、独立占地/高度/层数边界、非支配候选和可复现指标。仍未实现，搜索失败不等于证明无解。 / Core design requirements, not implemented features.
+
+## 高差与完整连接预览 / Elevation and complete preview
+
+|ID|Requirement / 要求|Acceptance / 验收边界|
+|---|---|---|
+|R27|独立 z(s)、方向坡度、接入三维切向和解析极值 / Independent station-based elevation, travel grades and critical points|有限 Hermite V1；零长/异常拒绝，overshoot 必报；未知地形/实体净空不通过 / Bounded V1, no structural/game claims|
+|R28|同一可旋转/平移/缩放场景展示两主线及全部拟连接 / Complete interactive connection scene|OD 高亮入口—连接—出口；full/partial/参数修改同步；纵断面和俯视切换，中英与保存重载 / No independent fork substituted for full preview|
+
+Current implementation scope and evidence: [profiles](VERTICAL_PROFILES.md), [scene](THREE_D_DESIGN.md), [validation](OFFLINE_VALIDATION.md). Not completion of every original phase/game gate.
+
+## 深度案例补充 / Deep-case requirements
+
+R29：按 [深度案例计划](DEEP_CASE_PLAN.md) 冻结H1–H5假设、独立真值、材料来源和误差；优先一个完整案例，不以功能/测试数量验收。R30：拓扑先行、平纵横联合、独立重建检查及独立游戏门槛。 / Freeze falsifiable hypotheses, provenance/errors and independent oracles; prioritize one integrated case with topology-first joint geometry, reconstructed validation and separate game gates. Both requirements are DESIGN ONLY / NOT_RUN.
+
+R31 / P0：用户道路消失只余桥墩报告要求未来所有权账本、异步收敛、真实道路/依赖验证和幂等恢复；按 [M11-A–E](research/road_mod_lessons.md) 及A45验证，未知根因不得写已修复。 / Future ownership and recovery contract; runtime NOT_RUN, cause UNKNOWN.

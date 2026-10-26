@@ -8,6 +8,6 @@
 4. 使用 Draft PR，填写文档影响及验证证据；来源不足或未游戏测试保持未验证。
 5. 不上传游戏/Mod 二进制、个人存档隐私或未经授权素材。许可证未确定前，外部代码/资产贡献先讨论授权。
 
-代码规范和工具链尚未选定，不在准备阶段虚构构建命令或 CI 通过状态。
+离线工具链、架构和复现命令见 [Demo](docs/OFFLINE_DEMO.md)；运行 npm test、浏览器测试和 build，按 [证据记录](docs/OFFLINE_VALIDATION.md) 留档。本地通过不等于 CI 通过。
 
 需求讨论请标注需求ID、验收Case和证据等级，并核对中英含义一致；见 [第一阶段需求](docs/DESIGN_REQUIREMENTS.md)。

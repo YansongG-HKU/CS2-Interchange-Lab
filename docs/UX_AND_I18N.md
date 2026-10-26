@@ -1,6 +1,8 @@
 # 可视化与双语体验 / Visualization and Bilingual UX
 
-状态：需求与交互设计，尚无可用UI。 / Requirements only; no implemented UI.
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 已有中英浏览器二维 UI、诊断定位、参数及 JSON 输入和输入撤销；直接道路拖拽/单位切换/游戏 Apply 未实现；三维相机、OD 高亮和纵断面已实现。 / Bilingual 2D browser UI exists; direct road dragging, unit switching and game Apply remain deferred; 3D camera, OD highlighting and profiles are implemented. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
+状态：完整交互目标；离线子集已实现，游戏 UI 未实现。 / Full interaction target; offline subset implemented, game UI unimplemented.
 
 ## 参考哲学 / Reference philosophy
 
@@ -61,3 +63,15 @@
 
 ## 场地预设与候选比较 / Site presets and alternatives
 城区/郊区/自定义只设置透明偏好；独立显示硬边界、禁建洞、面积口径、层数与高度基准。用同尺度平面图、纵断面、全部指标及冲突位置比较有限候选，不凑数、不静默放宽。新术语同时中英：紧凑Compact、展开Spread-out、少堆叠Fewer stacked levels、预留包络Reservation envelope、越界面积Overflow area、未找到可行解No feasible candidate found。
+
+离线审查修复：六车道使用响应式标签选择对应曲线，中文/英文及窄屏实测；旧异步加载不能覆盖新的选择/重置/编辑/语言意图。OD 与独立车道实验分别显示状态。 / Offline labels are responsive/selectable; stale loads cannot overwrite newer intent; OD and lane experiments report separate states. See [validation](OFFLINE_VALIDATION.md).
+
+Schema 2 UI adds bilingual height/grade controls, orbit/pan/zoom/reset/top, complete OD highlighting, selected longitudinal profile and explicit schema 1 flat-assumption migration. Invalid ramps remain visible; mathematical/structural/game status stays separate. / 详见 [三维契约](THREE_D_DESIGN.md) 与 [纵断面](VERTICAL_PROFILES.md)。
+
+诊断定位修复：三维模式下有位置的诊断移动相机到问题 XY；二维模式保留原标记和滚动行为。纵断面模式仅滚动当前纵断面面板，不声称自动选中了对应匝道。 / Located diagnostics focus the active 3D scene or existing plan marker; profile mode scrolls its panel.
+
+## 后续验证型三维 / Next validation-focused 3D
+
+[深度案例计划](DEEP_CASE_PLAN.md) 的车道完整追踪、断面和结构冲突定位尚未实现。现有OD高亮不等于完整逐车道交互。 / Future lane-level tracing, sections and structural conflict localization remain unimplemented; existing OD highlighting is not lane-level validation.
+
+未来恢复界面应分开FAILED、RECOVERY_REQUIRED和已验证范围，显示账本与未清理附属物，不把仅桥墩存在显示成成功；见 [P0](research/road_mod_lessons.md)。 / Future recovery UI must expose unresolved ownership/cleanup and verified scope. Not implemented.

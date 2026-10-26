@@ -16,3 +16,5 @@ logs/
 node_modules/
 bin/
 obj/
+
+dist/

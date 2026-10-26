@@ -1,6 +1,8 @@
 # 两曲线与场地占用核心需求 / Curved Corridors and Site Optimization
 
-状态：**需求与数学设计草案，未实现、未运行求解或游戏实验。** / Draft only; no solver or game validation.
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 二维子集使用采样路面并差集与侧向预留，完整 P/G/R 与结构净空仍 UNKNOWN；三维/纵断面预览已实现。 / Offline subset uses sampled pavement set operations; complete envelopes remain UNKNOWN. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
+状态：**完整需求与数学设计草案；有限离线子集另见上方，游戏实验未运行。** / Full design target; bounded offline subset documented above; no game validation.
 
 ## 核心目标 / Core goal
 
@@ -68,3 +70,11 @@
 层数验收：在局部投影重叠位置统计独立道路面，并报告全场最大层数及其位置；相接的同层路面去重，坡道沿程连续变高不作为许多独立层。分层高差/连接判定容差必须先冻结并版本化；缺实际路面数据时层数为UNKNOWN，不据中心线数量放行。 / Count independent local road decks, deduplicate connected same-level surfaces, and report the maximum with location and versioned tolerances.
 
 禁建区初始默认全高度禁入；若未来支持“只保护地面而许可高架跨越”，必须显式标层级/高度区间且先验证，不可由求解器猜测。可用地块含形状与孔洞；相同面积的L形、窄长或离散地块不保证同样可放。候选用同尺度俯视图比较。 / Exclusions default to all-height; ground-only restrictions require explicit verified semantics. Shape and holes matter, and previews share a common scale.
+
+## 有界三维与纵断面扩展 / Bounded 3D/profile extension
+
+[纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).
+
+## 同基准深度验证 / Same-benchmark validation
+
+[深度案例](DEEP_CASE_PLAN.md) 在冻结真值/误差后改变交角、高差、端点纵坡和场地，比较城区/郊区及full/partial；不得删车道/OD或放宽硬约束。 / Vary one frozen benchmark without silent demand or constraint changes; search failure is not an infeasibility proof. Planned, NOT_RUN.

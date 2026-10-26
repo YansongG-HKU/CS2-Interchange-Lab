@@ -1,5 +1,7 @@
 # 现实感与游戏实际 / Realism and Gameplay
 
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 已有离线端口可达及部分用地指标，但本文交通/结构/游戏运行要求仍未验证。 / Offline reachability and partial footprint metrics do not validate operation or structure. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
 状态 / Status: **Design addendum; all runtime cases NOT_RUN.** 现实工程参考、引擎规则、视觉目标与游戏实测分别记录；本项目不用于道路施工或安全认证。
 
 ## 新增需求 / Additional requirements
@@ -42,3 +44,11 @@
 
 ## 占地与堆叠权衡
 详见 [两曲线与场地占用](CURVED_SITE_OPTIMIZATION.md)。集散/展开/紧凑只是同需求候选，不能从城区/郊区标签推断最优结构。规划预留不是法律征地，桥下空间不是默认可开发土地，少占地也不等于游戏性能更好。
+
+## 有界三维与纵断面扩展 / Bounded 3D/profile extension
+
+[纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).
+
+## 真实资料与合成基准 / Real materials and synthetic benchmarks
+
+[深度案例](DEEP_CASE_PLAN.md) 优先可追溯主管部门平纵横图与地形，尺寸分实测/来源给定/推定/未知；影像不作高程真值，无资料明确合成。 / Distinguish provenance classes and explicitly synthetic benchmarks. Optional SUMO comparison is not CS2 equivalence. No new traffic or game validation.

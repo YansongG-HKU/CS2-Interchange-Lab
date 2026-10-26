@@ -1,5 +1,7 @@
 # 曲线、车道与互通契约 / Geometry, Lane and Movement Contract
 
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 已有纯计算几何、局部六车道实验及独立端口 OD 图；不是完整游戏车道图。 / Pure geometry, separate local six-lane experiment and port OD graph exist; no game lane graph. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+
 状态：设计规范草案，非游戏API或求解器实现。 / Draft contract, not an API or solver implementation.
 
 ## 输入模型 / Input model
@@ -50,3 +52,11 @@ OD验证限定选中立交影响区内的合法路径；经外部城市路口绕
 
 ## 曲线与用地联合约束
 按 [场地优化契约](CURVED_SITE_OPTIMIZATION.md) 同时处理接入弧长、局部交角、完整结构包络与地块形状。曲线数学可接不等于包络装得下；多层投影不重复算占地，坡道沿程标高不累计成多个层。
+
+## 有界三维与纵断面扩展 / Bounded 3D/profile extension
+
+[纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).
+
+## 完整案例后续契约 / Next complete-case contract
+
+[H1–H4](DEEP_CASE_PLAN.md) 要求完整互通集成6→4+2，检查接收车道、分合流、渐变、方向及交织；独立检查器从实际输出重建有向车道图，不信任连接标记。 / Integrate the fork into the interchange and independently reconstruct directed lane reachability; current isolated fork and centerline preview do not satisfy this contract. NOT_RUN.
