@@ -1,6 +1,6 @@
 # 路线图
 
-> **当前实现状态 / Current implementation (2026-10-25 UTC):** 新增 P0.5：有限二维离线 Demo 已实现并留测试证据，下一步先改善曲线/完整车道包络，再做独立游戏 API 验证；不跳过 P1–P5 游戏门禁。 / P0.5 offline demo implemented; improve curve/lane envelopes then independently validate game APIs. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
+> **当前实现状态 / Current implementation (2026-10-25 UTC):** 新增 P0.5：有限二维离线 Demo 已实现并留测试证据，下一步先冻结一个完整案例的材料、独立真值和误差，依深度计划另行授权执行；不跳过 P1–P5 游戏门禁。 / P0.5 offline demo implemented; freeze one complete-case evidence/oracle/error contract before separately authorized execution. 详见 [Demo](OFFLINE_DEMO.md) 与 [离线证据 / evidence](OFFLINE_VALIDATION.md)。下文保留完整需求及设计/游戏阶段边界。
 
 定位：非主业、业余爱好，不设商业里程碑、收入目标或固定工期。
 
@@ -25,3 +25,9 @@
 ## 有界三维与纵断面扩展 / Bounded 3D/profile extension
 
 [纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).
+
+## 下一阶段优先级 / Next priority
+
+[深度案例计划](DEEP_CASE_PLAN.md) 以D0材料/假设冻结→D1完整案例→D2反例/变体→D3独立复现→D4游戏映射替代按功能数量扩展的推进方式。全部NOT_RUN，不自动授权算法实现。原P1–P5游戏门槛继续有效；最小游戏节点实验可作为D4的前置，不跳过它。 / Depth-first gates remain unexecuted; existing game gates remain necessary.
+
+P0恢复设计同时纳入D0：用户道路消失/残留桥墩观察及 [M11-A–E](research/road_mod_lessons.md) 先形成独立故障注入预期；实际游戏复现仍须D4合法环境，当前NOT_RUN。 / Freeze recovery fault expectations before implementation; runtime reproduction remains a separate unexecuted gate.

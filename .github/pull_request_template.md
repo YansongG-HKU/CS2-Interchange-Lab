@@ -28,3 +28,6 @@
 - [ ] 现实参考/游戏规则/观察性结果分开；新运行指标注明需求与观察窗口
 
 - [ ] 如涉及用地/曲线优化，已记录面积口径、硬约束、候选公平比较和搜索状态
+
+## 深度案例与恢复门槛 / Deep-case and recovery gates
+如涉及下一阶段，链接H1–H5、D0–D4及相关M反例；列独立真值、冻结误差、对象所有权/依赖及恢复未完成项。旧Demo断言不能替代新门槛。 / Link independent oracles, frozen errors and ownership/recovery evidence; historical demo tests are not new acceptance.

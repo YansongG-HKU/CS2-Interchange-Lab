@@ -37,3 +37,9 @@ PASS 必须绑定确切版本组合及证据；版本改变后默认 NEEDS_RETES
 ## 有界三维与纵断面扩展 / Bounded 3D/profile extension
 
 [纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).
+
+## 独立检查和证据 / Independent checking and evidence
+
+执行前按 [D0–D4](DEEP_CASE_PLAN.md) 固定预期与误差。检查器不得复用生成器的连接结论；正反例、解析/独立复算、性质/收敛/盲测及干净环境复现分别记录。工程人工审查不等于第二个AI浏览。 / Freeze the independent oracle before generation and separately document adversarial, analytic, metamorphic, convergence, held-out and third-party reproduction evidence. Human engineering review is distinct. New gates NOT_RUN.
+
+P0“道路消失/只余桥墩”的 [M11-A–E](research/road_mod_lessons.md) 注入矩阵和A45为独立验收：超时不等于失败、桥墩不等于道路创建成功；FAILED/RECOVERY_REQUIRED/VERIFIED按实测范围报告。 / Timeout and visible piers are not failure/success oracles; recovery tests remain NOT_RUN.

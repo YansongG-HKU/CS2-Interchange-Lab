@@ -74,3 +74,7 @@
 ## 有界三维与纵断面扩展 / Bounded 3D/profile extension
 
 [纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).
+
+## 同基准深度验证 / Same-benchmark validation
+
+[深度案例](DEEP_CASE_PLAN.md) 在冻结真值/误差后改变交角、高差、端点纵坡和场地，比较城区/郊区及full/partial；不得删车道/OD或放宽硬约束。 / Vary one frozen benchmark without silent demand or constraint changes; search failure is not an infeasibility proof. Planned, NOT_RUN.

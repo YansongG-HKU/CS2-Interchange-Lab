@@ -56,3 +56,7 @@ OD验证限定选中立交影响区内的合法路径；经外部城市路口绕
 ## 有界三维与纵断面扩展 / Bounded 3D/profile extension
 
 [纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).
+
+## 完整案例后续契约 / Next complete-case contract
+
+[H1–H4](DEEP_CASE_PLAN.md) 要求完整互通集成6→4+2，检查接收车道、分合流、渐变、方向及交织；独立检查器从实际输出重建有向车道图，不信任连接标记。 / Integrate the fork into the interchange and independently reconstruct directed lane reachability; current isolated fork and centerline preview do not satisfy this contract. NOT_RUN.

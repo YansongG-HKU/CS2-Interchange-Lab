@@ -86,3 +86,7 @@ A through-only case with anchor=10m and handle=100m demonstrates separate status
 ## Three-dimensional and vertical extension / 三维及高差扩展
 
 See [vertical V1 and schema 2](VERTICAL_PROFILES.md) and [3D scene contract](THREE_D_DESIGN.md). Two independent mainline Hermite profiles and actual-anchor ramp profiles now drive a real orbit/pan/zoom scene, complete OD highlighting and selected connector/through profile. Choose `elevated-full` for a reproducible example. This extends the prior planar subset, without integrating the separate six-lane fork into a full lane interchange or validating game/structure behavior. Schema 1 import requires explicit acceptance of illustrative flat profiles; no silent zero terrain. / 已实现纵断面数学与真三维预览，未实现真实地形/结构/游戏路径。
+
+## 下一阶段状态 / Next-stage status
+
+现有能力保持不变。[深度案例计划](DEEP_CASE_PLAN.md) 是未执行的后续研究：集成逐车道拓扑、独立检查器、完整结构及游戏映射都不能从当前预览推断完成。 / Current runtime remains unchanged; new integrated lane, independent checker, structural and game gates are unexecuted.

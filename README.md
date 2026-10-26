@@ -73,3 +73,7 @@ npm run build
 打开本机 `http://127.0.0.1:4173`。可以改参数、选交会、检查真实计算、切换中英和导入导出 JSON。默认 full 案例有紧转向风险；partial 案例 OD 候选仍为 UNKNOWN；独立车道实验另显示自身状态，不能据此推断所有二维检查均无冲突。三维和独立纵断面已可交互；完整结构面积、净空、地形、游戏路径与兼容性仍未验证。 / Open the loopback URL on the same machine. Edit, select crossings, inspect computed candidates, switch locale, import/export JSON. Full fixture exposes tight-turn failures; partial OD remains UNKNOWN; the separate lane experiment reports its own state. Orbit/pan/zoom, complete OD highlighting and independently computed profiles are available. No public preview deployment or game release.
 
 选择 `elevated-full` 查看高架全连接预览；选择 OD 会高亮入口—匝道—出口，支持旋转/平移/缩放、俯视复位及纵断面。高度和坡度参数会重算场景，红色无效连接保留。 / Choose `elevated-full`, select an OD and inspect its full connection in 3D or profile. [高差支持域与迁移 / Elevation and migration](docs/VERTICAL_PROFILES.md) · [场景契约 / Scene contract](docs/THREE_D_DESIGN.md).
+
+## 下一阶段：一个完整深度案例 / Next: one complete deep case
+
+[新版研究与执行门槛](docs/DEEP_CASE_PLAN.md)：以逐车道拓扑、三维几何、独立检查与游戏映射贯通一个案例；本次仅研究/文档，算法、独立真值和游戏验证均未执行。现有Demo历史测试不等于新目标完成。 / Research/design only; no new algorithm, independent oracle or game validation has been executed.

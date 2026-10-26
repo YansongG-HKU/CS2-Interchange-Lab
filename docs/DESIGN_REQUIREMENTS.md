@@ -68,3 +68,9 @@ R21–R26在 [场地优化契约](CURVED_SITE_OPTIMIZATION.md) 中定义：曲�
 |R28|同一可旋转/平移/缩放场景展示两主线及全部拟连接 / Complete interactive connection scene|OD 高亮入口—连接—出口；full/partial/参数修改同步；纵断面和俯视切换，中英与保存重载 / No independent fork substituted for full preview|
 
 Current implementation scope and evidence: [profiles](VERTICAL_PROFILES.md), [scene](THREE_D_DESIGN.md), [validation](OFFLINE_VALIDATION.md). Not completion of every original phase/game gate.
+
+## 深度案例补充 / Deep-case requirements
+
+R29：按 [深度案例计划](DEEP_CASE_PLAN.md) 冻结H1–H5假设、独立真值、材料来源和误差；优先一个完整案例，不以功能/测试数量验收。R30：拓扑先行、平纵横联合、独立重建检查及独立游戏门槛。 / Freeze falsifiable hypotheses, provenance/errors and independent oracles; prioritize one integrated case with topology-first joint geometry, reconstructed validation and separate game gates. Both requirements are DESIGN ONLY / NOT_RUN.
+
+R31 / P0：用户道路消失只余桥墩报告要求未来所有权账本、异步收敛、真实道路/依赖验证和幂等恢复；按 [M11-A–E](research/road_mod_lessons.md) 及A45验证，未知根因不得写已修复。 / Future ownership and recovery contract; runtime NOT_RUN, cause UNKNOWN.

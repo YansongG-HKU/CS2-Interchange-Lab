@@ -35,3 +35,9 @@
 ## 有界三维与纵断面扩展 / Bounded 3D/profile extension
 
 [纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).
+
+## 深度案例附加字段 / Deep-case fields
+
+参见 [计划](DEEP_CASE_PLAN.md)：原始材料索引/许可/哈希；H1–H5假设与冻结失败标准；独立车道/OD真值；容差来源与误差预算；算法依据；源代码与检查器版本；正反例/盲测；真实截图/操作；复现及未完成项；第三方干净环境与人工工程审查分别记录。 / Record materials/rights/hashes, frozen hypotheses/oracle/errors, rationale, source/checker versions, positive/negative/held-out cases, captures/operations, reproduction and remaining work, with independent review provenance.
+
+P0恢复追加：operation ID、创建/修改/借用对象与entity版本、依赖账本、逐步状态及结构化错误、原世界前后对照、孤立附属物、未完成清理；见 [M11](research/road_mod_lessons.md)。 / Add ownership/dependency ledger, state/error trace, before/after world and unresolved recovery evidence.

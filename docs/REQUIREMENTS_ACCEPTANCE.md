@@ -84,3 +84,11 @@
 ## R27/R28 离线子项 / New bounded offline subcases
 
 A41: Hermite endpoints, 0→12m/200m average6% vs peak9%, equal-height overshoot, reverse travel grades, common datum shift, offset metric correction and invalid input. A42: real orbit/pan/zoom, full approach–ramp–exit highlight, full/partial edit, height/grade redraw, profile/top/reset, explicit legacy migration and schema2 reload. Executed evidence is in [OFFLINE_VALIDATION](OFFLINE_VALIDATION.md). Structural clearance, terrain, local deck counts and all game equivalents remain NOT_RUN; A41/A42 offline passes are not complete game acceptance.
+
+## 深度案例验收 / Deep-case acceptance
+
+A43 / R29：生成前审查材料、H1–H5失败条件、独立车道/OD真值及误差来源；状态NOT_RUN。A44 / R30：完整案例的独立检查、注入断连/逆向/穿插、变体/盲测及游戏读回；状态NOT_RUN。 / A43 freezes provenance, hypotheses, independent oracle and errors; A44 validates the complete case independently with adversarial cases and game read-back. Use [D0–D4 gates](DEEP_CASE_PLAN.md), not historical demo assertion counts.
+
+A45 / P0：用户“道路消失只余桥墩”报告的未来故障回归，按 [M11-A–E](research/road_mod_lessons.md) 验证所有权、异步收敛、实际道路/支撑读回、幂等补偿及结构化错误。覆盖部分成功、迟到、误归属、删除失败和恢复重载，不误删原道路。根因UNKNOWN、游戏复现NOT_RUN，不声称已修复。 / Future recovery gate; ownership and verified read-back must survive fault injection without damaging the pre-existing world. Unknown cause, unexecuted runtime reproduction.
+
+A46：将 [M01–M10](research/road_mod_lessons.md) 映射到H1–H5，测试方向镜像、边缘交叉、删除唯一出口、近邻/上下重叠、旧snapshot、道路B选择不被起点A覆盖、动态metadata及贪心反例。 / Reference-derived port, lane, identity and matching counterexamples; all NOT_RUN.

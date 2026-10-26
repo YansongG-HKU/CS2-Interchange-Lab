@@ -20,3 +20,7 @@ Measured tests and actual screenshots are indexed in [OFFLINE_VALIDATION](OFFLIN
 Build tradeoff: Three.js increases the production JavaScript chunk beyond Vite's default 500kB warning threshold. This is recorded as a bundle-size warning, not a build failure or a claim of arbitrary-device performance; no texture/model assets or paid services are fetched at runtime.
 
 Diagnostic navigation follows the active view: located errors pan the 3D camera and add the existing issue marker in three mode; plan mode retains its SVG marker and scroll target. Profile mode scrolls the existing profile panel without claiming diagnostic-to-profile selection. Diagnostics without coordinates do not invent a camera target. / 诊断按当前视图定位；无位置的错误不伪造空间目标。
+
+## 后续范围 / Future scope
+
+[深度案例](DEEP_CASE_PLAN.md) 将三维用于完整车道路径、断面和结构冲突验证；这是未实现目标。现有道路条带、OD高亮和浏览器测试只证明当前展示行为。 / Future lane and structural inspection is not established by current rendering evidence.

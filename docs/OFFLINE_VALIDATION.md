@@ -57,3 +57,7 @@ Height/terrain caps, structural clearance, local stacked decks, full structure/g
 ## Diagnostic navigation regression (2026-10-26 UTC)
 
 `node tests/diagnostic-focus.js` runs 13 real Chromium assertions on elevated-full with B.z0=80m, candidate d1: click a located ramp GRADE_LIMIT in Chinese and English, verify the camera actually moves and target XY equals the diagnostic; switch to plan, verify the existing SVG marker matches the same point and camera remains unchanged. Inputs, selected diagnostic, expected/actual assertions, browser and parent version are in [diagnostic-focus.json](../evidence/diagnostic-focus.json). Original 37 core, 81 planar browser, 37 3D browser checks, eight fixtures and build were rerun; CI/game remain NOT_RUN. Source manifest includes this targeted regression. No new screenshot is needed for the behavioral fix; actual camera/marker coordinates are recorded.
+
+## 历史证据边界 / Historical evidence boundary
+
+上述测试属于现有Demo。新 [深度案例D0–D4](DEEP_CASE_PLAN.md) 全部NOT_RUN；本轮仅文档链接/一致性检查，不重跑或改写历史数值，不把旧断言计作独立真值验证。 / Existing results remain historical demo evidence; documentation-only changes do not execute the new deep-case gates.

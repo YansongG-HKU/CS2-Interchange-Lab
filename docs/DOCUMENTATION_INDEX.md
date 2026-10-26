@@ -102,3 +102,22 @@ Reviewed unchanged: AGENTS/CONTRIBUTING still impose applicable workflow and evi
 Reviewed all tracked Markdown against this narrowly scoped event-handler fix. Updated CHANGELOG, UX_AND_I18N, THREE_D_DESIGN, OFFLINE_VALIDATION and this index; added [diagnostic focus evidence](../evidence/diagnostic-focus.json), refreshed source hashes and applicable test/build records. Acceptance: located 3D error moves the real camera in zh/en; 2D marker and camera isolation remain correct. Rollback: revert this fix commit. No game/Mod version is targeted or tested.
 
 Unchanged with reasons: README/OFFLINE_DEMO already promise diagnosis and link detailed validation, commands/support remain correct; AGENTS/CONTRIBUTING/DEVELOPMENT and both GitHub templates retain workflow requirements; RIGHTS/THIRD_PARTY/COMPATIBILITY have no dependency, license or game-state changes; DESIGN_REQUIREMENTS/GEOMETRY_AND_LANES/CURVED_SITE_OPTIMIZATION/VERTICAL_PROFILES/REQUIREMENTS_ACCEPTANCE/VALIDATION/ROAD_RULES/ROADMAP/REALISM_AND_GAMEPLAY/EXPERIMENT_TEMPLATE preserve geometry, acceptance scope and unknown boundaries; SOURCES and all seven research documents remain unchanged historical references. Examples/schema and package commands are unchanged; direct regression command is documented above. No new feature, publication or merge.
+
+## 2026-10-26 UTC — 深度研究与计划全仓影响 / Deep research and plan impact
+
+新增索引：[DEEP_CASE_PLAN](DEEP_CASE_PLAN.md)、[road_mod_lessons](research/road_mod_lessons.md)。前者冻结后续设计门槛，后者将CS1作者来源、旧项目固定main/未合并PR、用户故障观察和未证实根因分层；全部新增执行门槛NOT_RUN。 / New research and planning documents do not execute the proposed gates.
+
+| 文档 / Files | 处置与理由 / Disposition and reason |
+|---|---|
+| README, CHANGELOG, ROADMAP | Updated: depth-first next task, status and priority recovery design; existing runtime claims preserved. |
+| DESIGN_REQUIREMENTS, GEOMETRY_AND_LANES, CURVED_SITE_OPTIMIZATION, UX_AND_I18N, REQUIREMENTS_ACCEPTANCE | Updated: R29–R31/A43–A46, independent lane truth, joint geometry, reference counterexamples and P0 recovery boundaries. |
+| DEVELOPMENT, VALIDATION, EXPERIMENT_TEMPLATE, both GitHub templates | Updated: pre-execution freeze, independent checks, error/provenance and ownership/recovery evidence. |
+| COMPATIBILITY, ROAD_RULES, REALISM_AND_GAMEPLAY, SOURCES | Updated: separate source/game evidence, synthetic benchmarks, reference limitations and unverified recovery. |
+| OFFLINE_DEMO, OFFLINE_VALIDATION, THREE_D_DESIGN, VERTICAL_PROFILES | Updated: current implementation vs unexecuted deep-case scope; existing tests not relabeled as new validation. |
+| DOCUMENTATION_INDEX | Updated: new document links, full impact and document-only validation record. |
+| AGENTS, CONTRIBUTING | Unchanged: current authorization, whole-repo review and evidence disciplines already govern this work. |
+| RIGHTS, THIRD_PARTY | Unchanged: no copied third-party code/assets or dependency/license changes; prior repo MIT does not alter project rights. |
+| Existing seven research documents | Unchanged: historical source records remain intact; new dated research is separately indexed. |
+| Source/tests/scripts/examples/package files, evidence, .gitignore | Unchanged: documentation-only revision, no runtime/schema/case change and no new claims from historical results. |
+
+核验：全部受控Markdown影响检查、相对链接、需求/验收/参考映射、NOT_RUN/UNKNOWN边界与git diff检查。本次未重跑核心/浏览器/构建，未安装或测试游戏/Mod；CI未执行不得算通过。用户只余桥墩故障尚未复现/定位。 / Checks cover documentation consistency and links only, not new runtime or game validation. Revert this documentation commit for rollback; keep Draft PR against the requirements branch.

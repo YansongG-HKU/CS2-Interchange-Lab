@@ -31,3 +31,9 @@ Placemaker是交互参考，不自动加入运行依赖。RB/Traffic等外部编
 ## 有界三维与纵断面扩展 / Bounded 3D/profile extension
 
 [纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).
+
+## 深度案例的游戏门槛 / Deep-case runtime gate
+
+[D4](DEEP_CASE_PLAN.md) 要求固定CS2 build、道路资产和Road Builder/Anarchy版本，实际车道读回、车辆、保存重载及编辑撤销。版本目前未选定，全部NOT_RUN；CS1源码与旧项目PR不能替代当前CS2实测。 / Exact runtime versions remain unset; historical source/PR research does not establish compatibility.
+
+旧项目和CS1机制的 [来源边界及P0恢复契约](research/road_mod_lessons.md) 不证明CS2原子事务、Undo或稳定lane API；Anarchy只读能力探测不得替用户开关。 / Source lessons are not a compatibility guarantee; do not change the user’s Anarchy setting.

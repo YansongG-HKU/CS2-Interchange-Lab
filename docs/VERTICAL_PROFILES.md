@@ -46,3 +46,7 @@ Tests cover the 6%-average/9%-peak counterexample, zero length, equal-height ove
 - [Three.js official APIs](https://threejs.org/docs/pages/OrbitControls.html), [renderer](https://threejs.org/docs/pages/WebGLRenderer.html), [geometry](https://threejs.org/docs/pages/BufferGeometry.html): library usage; pinned 0.186.1.
 
 A nonzero-mainline-grade variation of the `elevated-full` fixture also checks incoming/emitted-ramp/outgoing 3D segment directions at every attachment within 0.01 radians of discretization tolerance (at 128 samples). This fixture-specific sampled check is not a certified all-curve or game G1 claim.
+
+## 后续联合设计 / Future joint design
+
+[深度案例](DEEP_CASE_PLAN.md) 将平纵横及结构包络联合验证；当前单段Hermite与中心线高差诊断不足以完成H4。 / Single-segment profiles and crossing height diagnostics do not satisfy future full-width structural validation. Existing bounded implementation is unchanged.

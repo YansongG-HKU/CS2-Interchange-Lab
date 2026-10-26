@@ -46,3 +46,9 @@
 ## 2026-10-26 UTC — 诊断视图定位 / Diagnostic view focus
 - 修复三维诊断点击只定位隐藏二维图的问题，使用已有 scene.focusIssue；二维定位不变。
 - 新增中英真实浏览器相机/二维标记回归；没有改变几何、依赖或游戏验证状态。
+
+## 2026-10-26 UTC — 深度案例研究与计划 / Deep-case research and plan
+
+- 新增双语深度计划、H1–H5与D0–D4门槛，优先一个完整案例、独立真值和检查器，所有新工作NOT_RUN。
+- 研究CS1四条能力链及已确认旧仓main/未合并PR，转为M01–M11反例；用户只余桥墩故障列P0，根因UNKNOWN，未宣称修复。
+- 仅研究/文档；源码、Demo案例与既有测试证据不变，未实现新版算法，未游戏实测、合并或发布。 / Documentation only; existing runtime evidence is unchanged.

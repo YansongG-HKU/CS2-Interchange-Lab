@@ -69,3 +69,9 @@
 Schema 2 UI adds bilingual height/grade controls, orbit/pan/zoom/reset/top, complete OD highlighting, selected longitudinal profile and explicit schema 1 flat-assumption migration. Invalid ramps remain visible; mathematical/structural/game status stays separate. / 详见 [三维契约](THREE_D_DESIGN.md) 与 [纵断面](VERTICAL_PROFILES.md)。
 
 诊断定位修复：三维模式下有位置的诊断移动相机到问题 XY；二维模式保留原标记和滚动行为。纵断面模式仅滚动当前纵断面面板，不声称自动选中了对应匝道。 / Located diagnostics focus the active 3D scene or existing plan marker; profile mode scrolls its panel.
+
+## 后续验证型三维 / Next validation-focused 3D
+
+[深度案例计划](DEEP_CASE_PLAN.md) 的车道完整追踪、断面和结构冲突定位尚未实现。现有OD高亮不等于完整逐车道交互。 / Future lane-level tracing, sections and structural conflict localization remain unimplemented; existing OD highlighting is not lane-level validation.
+
+未来恢复界面应分开FAILED、RECOVERY_REQUIRED和已验证范围，显示账本与未清理附属物，不把仅桥墩存在显示成成功；见 [P0](research/road_mod_lessons.md)。 / Future recovery UI must expose unresolved ownership/cleanup and verified scope. Not implemented.

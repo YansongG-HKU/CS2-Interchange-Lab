@@ -48,3 +48,7 @@
 ## 有界三维与纵断面扩展 / Bounded 3D/profile extension
 
 [纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).
+
+## 真实资料与合成基准 / Real materials and synthetic benchmarks
+
+[深度案例](DEEP_CASE_PLAN.md) 优先可追溯主管部门平纵横图与地形，尺寸分实测/来源给定/推定/未知；影像不作高程真值，无资料明确合成。 / Distinguish provenance classes and explicitly synthetic benchmarks. Optional SUMO comparison is not CS2 equivalence. No new traffic or game validation.
