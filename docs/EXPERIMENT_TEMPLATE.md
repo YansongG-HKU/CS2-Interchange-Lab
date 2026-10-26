@@ -31,3 +31,7 @@
 - footprint定义及基线、总面积/场地内占比/越界/新增移除保留：
 - 预设实际参数、硬/软约束、归一化尺度：
 - 候选集、搜索停止原因与复现设置（不编种子或全局最优）：
+
+## 有界三维与纵断面扩展 / Bounded 3D/profile extension
+
+[纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).

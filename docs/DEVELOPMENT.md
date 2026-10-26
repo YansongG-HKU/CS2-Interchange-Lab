@@ -28,3 +28,7 @@
 交通结论必须注明控变量及数据能力；无法观测或不能控制需求时只作观察，不以低流量或空路宣称容量提升。现实参数不得无来源冒充游戏阈值。
 
 场地优化记录面积集合定义与基线、单位、硬/软约束和候选集；改变这些语义须同步图例、双语、验收与数据记录。不能把有限搜索失败写成数学无解。
+
+## 有界三维与纵断面扩展 / Bounded 3D/profile extension
+
+[纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).

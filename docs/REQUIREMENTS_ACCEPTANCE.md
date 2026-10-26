@@ -80,3 +80,7 @@
 |A40|候选与参数复现 / Reproducibility|同需求同尺度，Pareto限本次集合，记录版本/容差/设置 / Fair reproducible comparisons|
 
 追溯：R21→A32；R22→A34/A39；R23→A33；R24→A35/A38；R25→A38/A40；R26→A35–A37/A40。来源见CURVED_SITE_OPTIMIZATION及research/land_optimization、research/land_controls。全部NOT_RUN。
+
+## R27/R28 离线子项 / New bounded offline subcases
+
+A41: Hermite endpoints, 0→12m/200m average6% vs peak9%, equal-height overshoot, reverse travel grades, common datum shift, offset metric correction and invalid input. A42: real orbit/pan/zoom, full approach–ramp–exit highlight, full/partial edit, height/grade redraw, profile/top/reset, explicit legacy migration and schema2 reload. Executed evidence is in [OFFLINE_VALIDATION](OFFLINE_VALIDATION.md). Structural clearance, terrain, local deck counts and all game equivalents remain NOT_RUN; A41/A42 offline passes are not complete game acceptance.

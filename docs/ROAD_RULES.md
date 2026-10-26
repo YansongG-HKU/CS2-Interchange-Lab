@@ -30,3 +30,7 @@
 补充 [现实感与游戏实际](REALISM_AND_GAMEPLAY.md)：外观/可建造/连通/交通运行分层验收，保留游戏版本差异。
 
 两曲线与场地占用提升为核心需求，见CURVED_SITE_OPTIMIZATION.md；数字边界需来源与单位，搜索超时不声称无解。
+
+## 有界三维与纵断面扩展 / Bounded 3D/profile extension
+
+[纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).

@@ -1,6 +1,6 @@
-# 游戏外二维 Demo / Offline 2D demo
+# 游戏外连接预览 Demo / Offline connection preview
 
-Version `offline-0.1.0`, schema `1`. Based on requirements head `bfccebe7467b2a8935306910b7763957ec98c207`, not initialization main. This is a bounded executable experiment, **not completion of all Phase 1 requirements**. / 基于需求分支的有限可运行实验，不代表全部一期需求完成。
+Version `offline-0.2.0`, schema `2`. Based on requirements head `bfccebe7467b2a8935306910b7763957ec98c207`, not initialization main. This is a bounded executable experiment, **not completion of all Phase 1 requirements**. / 基于需求分支的有限可运行实验，不代表全部一期需求完成。
 
 ## 运行 / Run
 
@@ -11,7 +11,8 @@ npm ci --ignore-scripts --cache /tmp/cs2-npm
 npm run dev -- --port 4173
 # Open http://127.0.0.1:4173 on the same machine
 npm test
-npm run test:browser   # running dev server; /usr/bin/chromium
+npm run test:browser   # preserved 2D interaction regression
+npm run test:3d        # true WebGL camera/OD/profile interaction; running dev server
 npm run evidence
 npm run build
 # Serve dist with any local static HTTP server; examples are copied into dist/examples.
@@ -27,15 +28,15 @@ Choose a fixture, edit numeric values (metres/m²), choose a numbered intersecti
 |---|---|---|
 | Data / 数据 | `src/core/model.js` | Versioned JSON, metres, stable directed port/lane IDs; no locale or game objects / 无语言或游戏对象 |
 | Pure geometry / 纯计算 | `geometry.js`, `area.js`, `solver.js` | Input → deterministic result, no mutation, IO, random seed or game API / 确定性、无输入修改 |
-| Browser / 浏览器 | `src/ui.js`, `i18n.js`, `style.css` | Same computed geometry for SVG and reporting; zh/en, input undo, local JSON IO / 同一计算结果绘图和报告 |
+| Browser / 浏览器 | `src/ui.js`, `i18n.js`, `style.css` | Same computed geometry for Three.js 3D, SVG plan/profile and reporting; zh/en, input undo, local JSON IO / 同一计算结果绘图和报告 |
 | Adapter boundary / 适配边界 | `src/adapters/game.js` | Explicitly unavailable snapshot/apply; future revision check, atomic rollback and read-back required / 禁止未经验证的游戏应用 |
 | Evidence / 证据 | `tests/`, `examples/`, `evidence/` | Unit/property/regression, real Chromium interaction, full fixture inputs and source hashes / 输入、实测及源文件哈希 |
 
-Plain JavaScript ES modules + Vite; polygon-clipping is the only runtime package. No framework, persistence server, auth, paid service or game binary. UI uses one synchronous bounded solve after yielding a frame, invalidates prior results, and discards stale scheduled jobs. It is not a worker-based arbitrary-size interactive solver; inputs are bounded. / 轻量模块，无大框架；同步有限计算不是任意规模实时求解器。
+Plain JavaScript ES modules + Vite; runtime packages are polygon-clipping and Three.js 0.186.1. No framework, persistence server, auth, paid service or game binary. UI uses one synchronous bounded solve after yielding a frame, invalidates prior results, and discards stale scheduled jobs. It is not a worker-based arbitrary-size interactive solver; inputs are bounded. / 轻量模块，无大框架；同步有限计算不是任意规模实时求解器。
 
 ## Frozen support domain / 冻结支持域
 
-Exactly two regular planar cubic Bézier centreline curves, four control points each, coordinates ±2000m, ordinary motor roads, RHT/LHT. Stationing follows sampled horizontal chord length, not Bézier t or world-axis offsets. Closed non-self-crossing site polygon (4–40 vertices including closing point), up to ten closed all-height exclusions wholly inside site. Concave sites supported; disconnected site components, overlapping/near-tangent road generation, non-crossing proximity mode, vertical geometry, custom road types, extra schema keys and incompatible schema/solver versions are not supported. / 仅两条规则三次平面曲线、普通机动车、明确左右行；单个可凹场地和最多十个全高度禁建洞。其他对象/版本显式拒绝；无交点报告有限搜索未找到，不证明无交点或无解。
+Exactly two regular planar cubic Bézier centreline curves, four control points each, coordinates ±2000m, ordinary motor roads, RHT/LHT. Stationing follows sampled horizontal chord length, not Bézier t or world-axis offsets. Closed non-self-crossing site polygon (4–40 vertices including closing point), up to ten closed all-height exclusions wholly inside site. Concave sites supported; disconnected site components, overlapping/near-tangent road generation, non-crossing proximity mode, terrain-aware vertical geometry, custom road types, extra schema keys and incompatible schema/solver versions are not supported. / 仅两条规则三次平面曲线、普通机动车、明确左右行；单个可凹场地和最多十个全高度禁建洞。其他对象/版本显式拒绝；无交点报告有限搜索未找到，不证明无交点或无解。
 
 Frozen experimental ranges (not CS2 laws): anchor 10–300m; tangent handle 5–250m; lane width 2–5m; corridor width 24–60m; lateral reserve 0–20m; partial reservation cap 1–16,000,000m²; height 0–100m; levels integer 1–10; samples 128 or 256. Height and level caps are **stored but unassessed**, so candidates can never return overall PASS. These ranges bound workload and fixtures, not engineering acceptance. / 高度/层数仅保留独立硬约束，缺三维数据不能判定满足。
 
@@ -68,7 +69,7 @@ For n uniform Bézier parameter intervals, centreline linear interpolation devia
 - `NO_CANDIDATE_FOUND`: bounded search failed / 有限候选未命中，**not PROVEN_INFEASIBLE**。
 - `UNKNOWN`: the named experiment has incomplete checks; OD candidate status does not cover the separate lane experiment. `splitStatus` and `splitDiagnostics` report the fork independently. / 指定实验仍有未验证项；OD 候选状态不覆盖独立车道实验，后者另列状态及诊断。
 
-Default full skew fixture deliberately exposes two tight-turn offset risks. The partial fixture provides a usable interactive numerical loop while retaining UNKNOWN for structure/game checks. Deferred: certified offset sweeps, integrated full lane-level interchange, merge/drop policies, arbitrary/close curves, terrain/vertical/3D, dragging and layered views, unit display switching, gameplay lifecycle, free-flow/control assignment, traffic capacity and true local stacking. No Apply, game save editing, Mod integration or game release is implemented. / 延期项目不伪装完成。
+Default full skew fixture deliberately exposes two tight-turn offset risks. The partial fixture provides a usable interactive numerical loop while retaining UNKNOWN for structure/game checks. Deferred: certified offset sweeps, integrated full lane-level interchange, merge/drop policies, arbitrary/close curves, terrain/structural clearance, direct road dragging and advanced layered views, unit display switching, gameplay lifecycle, free-flow/control assignment, traffic capacity and true local stacking. No Apply, game save editing, Mod integration or game release is implemented. / 延期项目不伪装完成。
 
 Rollback: delete the independent checkout or revert this feature branch; there are no game/save/database migrations. Source branches and unrelated repositories stay untouched. / 可删除独立目录或回滚分支，无游戏/数据库副作用。
 
@@ -81,3 +82,7 @@ Lane labels are a responsive HTML list instead of overlapping text at tightly sp
 File reads and example fetches share an input-request revision. A newer load, reset, recompute, undo, direct JSON submission, numeric/JSON typing, lane selection or language change invalidates older loads; rejected stale completions cannot change the model or diagnostics. Language changes cancel pending loads but preserve already computed geometry. / 统一加载代次，新的用户意图使旧请求失效；语言切换保留已有计算结果。
 
 A through-only case with anchor=10m and handle=100m demonstrates separate statuses: OD candidate UNKNOWN while local lane connectors produce CONSTRAINT_VIOLATION. Neither is summarized as all planar checks passed. / 两实验分开报告，不互相掩盖诊断。
+
+## Three-dimensional and vertical extension / 三维及高差扩展
+
+See [vertical V1 and schema 2](VERTICAL_PROFILES.md) and [3D scene contract](THREE_D_DESIGN.md). Two independent mainline Hermite profiles and actual-anchor ramp profiles now drive a real orbit/pan/zoom scene, complete OD highlighting and selected connector/through profile. Choose `elevated-full` for a reproducible example. This extends the prior planar subset, without integrating the separate six-lane fork into a full lane interchange or validating game/structure behavior. Schema 1 import requires explicit acceptance of illustrative flat profiles; no silent zero terrain. / 已实现纵断面数学与真三维预览，未实现真实地形/结构/游戏路径。

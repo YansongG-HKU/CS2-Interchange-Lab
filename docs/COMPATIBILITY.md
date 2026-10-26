@@ -27,3 +27,7 @@ Traffic 作者说明 Road Builder 编辑道路可能重置自定义车道连接�
 Placemaker是交互参考，不自动加入运行依赖。RB/Traffic等外部编辑触发Apply前状态复核；缺少所需API或不支持车道类型时显式阻塞。兼容矩阵仍全部NOT_TESTED。
 
 游戏版本更新涉及换道/路径成本/失败出行时，重新验证行为；RoadBuilder/Traffic依赖缺失后的更新与重载需单独回归。参考research/game_pitfalls.md，仍全部NOT_TESTED。
+
+## 有界三维与纵断面扩展 / Bounded 3D/profile extension
+
+[纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).

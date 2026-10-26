@@ -88,3 +88,11 @@ New source/tests/examples and three new docs reviewed for matching version/schem
 其余全部文档无需修改：AGENTS/CONTRIBUTING/DEVELOPMENT/RIGHTS/THIRD_PARTY 与 Issue/PR 模板的工作流、权利和依赖不变；DESIGN_REQUIREMENTS/GEOMETRY_AND_LANES/CURVED_SITE_OPTIMIZATION/REQUIREMENTS_ACCEPTANCE/VALIDATION/ROAD_RULES/ROADMAP/COMPATIBILITY/REALISM_AND_GAMEPLAY/EXPERIMENT_TEMPLATE/SOURCES 的支持域、数学/游戏边界和完整验收要求不变，当前离线证据仍由既有链接提供；七份 research 仍保留历史来源。不是新增游戏功能、交通或三维验证，也不扩展一期完成声明。
 
 最后边界修复仅更新 OFFLINE_DEMO、OFFLINE_VALIDATION、CHANGELOG、本索引及源哈希/测试/构建证据：ANCHOR_RANGE 提前退出时车道实验为 NOT_RUN。其余文档已复核沿用上一轮无需修改理由，支持域、面积、依赖及游戏状态不变。 / Final boundary fix records NOT_RUN and refreshed evidence only.
+
+## 三维/高差 V1 全仓影响 / Full 3D/profile impact review
+
+New indexed documents: [VERTICAL_PROFILES](VERTICAL_PROFILES.md), [THREE_D_DESIGN](THREE_D_DESIGN.md). New evidence: [browser3d](../evidence/browser3d.json) and its six linked screenshots; `examples/elevated-full.json`; existing cases explicitly migrated to schema2 flat profiles.
+
+Updated README, CHANGELOG, OFFLINE_DEMO, OFFLINE_VALIDATION, THIRD_PARTY, DESIGN_REQUIREMENTS, GEOMETRY_AND_LANES, CURVED_SITE_OPTIMIZATION, UX_AND_I18N, REQUIREMENTS_ACCEPTANCE, ROAD_RULES, DEVELOPMENT, COMPATIBILITY, ROADMAP, REALISM_AND_GAMEPLAY, VALIDATION, EXPERIMENT_TEMPLATE, SOURCES and this index: executable 3D/profile scope, migration, dependencies, test/evidence paths and truthful remaining limits.
+
+Reviewed unchanged: AGENTS/CONTRIBUTING still impose applicable workflow and evidence discipline; RIGHTS already separates dependency licenses from project rights; Issue/PR templates already cover versions/scope/evidence/rollback; seven research files remain historical evidence rather than runtime claims; .gitignore already excludes dependencies and build output. No unrelated repository or game asset changes. / 已全面复核，无需修改项有明确理由。

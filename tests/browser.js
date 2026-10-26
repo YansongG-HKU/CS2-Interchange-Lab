@@ -107,6 +107,7 @@ async function importOwnFields(context) {
 try {
   await page.goto("http://127.0.0.1:4173");
   await ready();
+  await page.locator("#view-plan").click();
   let a = await snapshot();
   check(
     "default nonorthogonal full baseline",
@@ -237,7 +238,7 @@ try {
     path: "evidence/browser-overflow-en.png",
     fullPage: true,
   });
-  await page.locator("summary").click();
+  await page.locator("details:has(#json) summary").click();
   await page.locator("#json").fill("{oops");
   await page.locator("#applyJSON").click();
   check(
@@ -341,7 +342,7 @@ try {
   conflict.required = conflict.required.filter(
     (m) => m.split(">")[0] === m.split(">")[1],
   );
-  await page.locator("summary").click();
+  await page.locator("details:has(#json) summary").click();
   await page.locator("#json").fill(JSON.stringify(conflict));
   await page.locator("#applyJSON").click();
   await ready();

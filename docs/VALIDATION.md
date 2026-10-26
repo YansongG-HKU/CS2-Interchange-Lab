@@ -33,3 +33,7 @@ PASS 必须绑定确切版本组合及证据；版本改变后默认 NEEDS_RETES
 新增A24–A31运行与现实感场景；采用相同存档副本/需求/观察窗口，若无法控制需求或统计失败出行，明确标观察性及缺测，不作容量证明。
 
 新增A32–A40核验曲线/地块/堆叠/面积口径与候选公平比较；未冻结容差、基线和分析边界时不得PASS。仍全部NOT_RUN。
+
+## 有界三维与纵断面扩展 / Bounded 3D/profile extension
+
+[纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).

@@ -1,4 +1,5 @@
-export const VERSION = "offline-0.1.0";
+import { flatVertical } from "./vertical.js";
+export const VERSION = "offline-0.2.0";
 export const PORTS = ["A+", "A-", "B+", "B-"];
 // End ports are directional: each incoming port has one through exit and two cross-corridor exits.
 export const FULL = PORTS.flatMap((from) =>
@@ -8,7 +9,8 @@ export const FULL = PORTS.flatMap((from) =>
 );
 export const clone = (x) => JSON.parse(JSON.stringify(x));
 export const defaultCase = () => ({
-  schema: 1,
+  schema: 2,
+  vertical: flatVertical(),
   solver: VERSION,
   name: "curved-skew",
   trafficSide: "RHT",

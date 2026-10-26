@@ -44,3 +44,7 @@
 
 ## 占地与堆叠权衡
 详见 [两曲线与场地占用](CURVED_SITE_OPTIMIZATION.md)。集散/展开/紧凑只是同需求候选，不能从城区/郊区标签推断最优结构。规划预留不是法律征地，桥下空间不是默认可开发土地，少占地也不等于游戏性能更好。
+
+## 有界三维与纵断面扩展 / Bounded 3D/profile extension
+
+[纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).

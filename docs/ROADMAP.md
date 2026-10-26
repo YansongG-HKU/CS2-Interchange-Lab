@@ -21,3 +21,7 @@
 需求补充R13–R20/A24–A31纳入前置设计；尚不提前实施C-D等复杂生成。优先验证单出口的下游回堵与实际完成出行，再扩展结构。
 
 新增曲线×曲线与城区/郊区场地权衡需求，仍先设计和有限输入域验证，不承诺任意地块/复杂多曲线全自动求解。累计40个设计验收场景，不等于已测试。
+
+## 有界三维与纵断面扩展 / Bounded 3D/profile extension
+
+[纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).

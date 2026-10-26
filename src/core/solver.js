@@ -1,3 +1,5 @@
+import { connectionPreview } from "./preview.js";
+import { verticalCandidate } from "./vertical.js";
 import { VERSION, FULL, PORTS, laneMapping, defaultCase } from "./model.js";
 import {
   sample,
@@ -24,7 +26,7 @@ export function validate(x) {
   for (const key of Object.keys(x))
     if (!INPUT_KEYS.has(key)) errors.push(fail("UNSUPPORTED", key));
   if (typeof x.name !== "string" || x.name.length > 100) bad("name");
-  if (x.schema !== 1 || x.solver !== VERSION)
+  if (x.schema !== 2 || x.solver !== VERSION)
     errors.push(fail("UNSUPPORTED", "schema/solver"));
   if (
     x.roadType !== "motor" ||
@@ -34,6 +36,32 @@ export function validate(x) {
     errors.push(fail("UNSUPPORTED", "roadType/laneMode/trafficSide"));
   const finite = (v, min, max) =>
     typeof v === "number" && Number.isFinite(v) && v >= min && v <= max;
+  const v = x.vertical;
+  if (
+    !v ||
+    typeof v !== "object" ||
+    Object.keys(v).some(
+      (k) =>
+        !["datum", "terrain", "source", "maxGrade", "profiles"].includes(k),
+    ) ||
+    v.datum !== "project-local" ||
+    v.terrain !== "unknown" ||
+    !["user-defined", "legacy-flat-accepted"].includes(v.source) ||
+    !finite(v.maxGrade, 0.001, 0.3) ||
+    !Array.isArray(v.profiles) ||
+    v.profiles.length !== 2 ||
+    !v.profiles.every(
+      (p) =>
+        p &&
+        Object.keys(p).length === 4 &&
+        Object.keys(p).every((k) => ["z0", "z1", "g0", "g1"].includes(k)) &&
+        finite(p.z0, -200, 500) &&
+        finite(p.z1, -200, 500) &&
+        finite(p.g0, -0.3, 0.3) &&
+        finite(p.g1, -0.3, 0.3),
+    )
+  )
+    bad("vertical");
   const pt = (p) =>
     Array.isArray(p) &&
     p.length === 2 &&
@@ -117,6 +145,8 @@ export function solve(x) {
     hits = crossings(...curves);
   base.crossings = hits;
   base.curves = curves;
+  base.vertical = verticalCandidate(x, curves, []);
+  base.preview = connectionPreview(x, base, null);
   base.mode = x.required.length === FULL.length ? "full" : "partial";
   base.lanes = laneMapping();
   base.excluded = FULL.filter((m) => !x.required.includes(m));
@@ -157,6 +187,13 @@ export function solve(x) {
         id,
         status: "CONSTRAINT_VIOLATION",
         diagnostics: [fail("ANCHOR_RANGE", "anchor", { point: hit.p })],
+        vertical: {
+          status: "NOT_RUN",
+          mainlines: [],
+          ramps: [],
+          diagnostics: [],
+          clearance: "UNKNOWN",
+        },
         splitStatus: "NOT_RUN",
         splitDiagnostics: [],
       });
@@ -246,8 +283,11 @@ export function solve(x) {
       const [from, to] = od.split(">");
       return { from: `${from}:in`, to: `${to}:out`, route: od };
     });
+    const vertical = verticalCandidate(x, curves, routes);
+    diag.push(...vertical.diagnostics);
     base.candidates.push({
       id,
+      vertical,
       status: diag.length ? "CONSTRAINT_VIOLATION" : "UNKNOWN",
       diagnostics: diag,
       splitDiagnostics,
@@ -283,6 +323,8 @@ export function solve(x) {
       layerCap: x.layerCap,
     });
   }
+  for (const candidate of base.candidates)
+    candidate.preview = connectionPreview(x, base, candidate);
   // Rank ONLY candidates without known planar violations; never claim feasible 3D.
   const valid = base.candidates.filter((c) => c.status === "UNKNOWN");
   valid.sort((a, b) =>

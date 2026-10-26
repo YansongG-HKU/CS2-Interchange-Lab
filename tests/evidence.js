@@ -1,3 +1,4 @@
+import { hermite, profileSummary } from "../src/core/vertical.js";
 import fs from "node:fs";
 import crypto from "node:crypto";
 import { execFileSync } from "node:child_process";
@@ -11,6 +12,7 @@ const expected = {
   "small-site": "NO_CANDIDATE_FOUND",
   exclusion: "NO_CANDIDATE_FOUND",
   invalid: "UNSUPPORTED",
+  "elevated-full": "UNKNOWN",
 };
 const records = [];
 for (const [name, status] of Object.entries(expected)) {
@@ -36,6 +38,34 @@ for (const [name, status] of Object.entries(expected)) {
       land: c.land,
       od: c.od,
       positionBound: c.positionBound,
+      vertical: c.vertical
+        ? {
+            status: c.vertical.status,
+            clearance: c.vertical.clearance,
+            mainlines: c.vertical.mainlines.map((m) => ({
+              id: m.id,
+              profile: m.profile,
+            })),
+            ramps: c.vertical.ramps.map((r) => ({
+              id: r.id,
+              a: r.a,
+              b: r.b,
+              profile: r.profile,
+              status: r.status,
+            })),
+          }
+        : null,
+      preview: c.preview
+        ? {
+            roads: c.preview.roads.map((r) => ({
+              id: r.id,
+              kind: r.kind,
+              invalid: r.invalid,
+            })),
+            odPaths: Object.keys(c.preview.paths),
+            crossingDiagnostics: c.preview.crossingDiagnostics,
+          }
+        : null,
     })),
   });
 }
@@ -81,6 +111,20 @@ fs.writeFileSync(
       requirementsHead: "bfccebe7467b2a8935306910b7763957ec98c207",
       records,
       refinement,
+      verticalBenchmarks: [
+        {
+          input: { length: 200, z0: 0, z1: 12, g0: 0, g1: 0 },
+          expectedPeak: 0.09,
+          actual: profileSummary(hermite(200, { z0: 0, z1: 12, g0: 0, g1: 0 })),
+        },
+        {
+          input: { length: 200, z0: 5, z1: 5, g0: 0.1, g1: -0.1 },
+          expectedMaxZ: 10,
+          actual: profileSummary(
+            hermite(200, { z0: 5, z1: 5, g0: 0.1, g1: -0.1 }),
+          ),
+        },
+      ],
     },
     null,
     2,

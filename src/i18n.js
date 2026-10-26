@@ -1,4 +1,63 @@
 export const messages = {
+  viewThree: ["三维连接", "3D connections"],
+  viewPlan: ["二维俯视", "2D plan"],
+  viewProfile: [
+    "所选匝道/主线参考纵断面",
+    "Selected ramp / mainline reference profile",
+  ],
+  cameraReset: ["重置相机", "Reset camera"],
+  cameraTop: ["三维俯视", "Top camera"],
+  selectOD: ["选择 OD 高亮完整路径", "Select OD to highlight complete path"],
+  pathPreview: [
+    "高亮为影响区内入口—连接—出口规划路径；不是游戏寻路。",
+    "Highlight: in-area approach–connector–exit planning path, not game routing.",
+  ],
+  cameraHelp: [
+    "左键/单指旋转；右键平移；滚轮/双指缩放。坐标 x/y 为平面、z 为标高，均为米。",
+    "Left drag/one finger: orbit; right drag: pan; wheel/two fingers: zoom. x/y plan, z elevation, metres.",
+  ],
+  sceneLegend: [
+    "灰：两条主线路面；赭色：拟建匝道；红：已知无效连接；黄色：所选完整 OD。小球：接入点；箭头：方向。路面不是完整结构或逐车道设计，网格仅为项目零标高。",
+    "Grey: source pavement; ochre: proposed ramps; red: invalid; yellow: selected complete OD. Dots: anchors; arrows: direction. Pavement is not full structure or lane allocation. Grid is project datum, not terrain.",
+  ],
+  webglUnavailable: [
+    "WebGL2 不可用；已保留真实二维俯视，请检查浏览器支持。",
+    "WebGL2 unavailable; real 2D plan retained. Check browser support.",
+  ],
+  verticalInputs: [
+    "独立纵断面（实验参数）",
+    "Independent profiles (experimental)",
+  ],
+  datum: ["共同项目标高基准", "Shared project datum"],
+  z0: ["起点标高 (m)", "Start elevation (m)"],
+  z1: ["终点标高 (m)", "End elevation (m)"],
+  g0: ["起点纵坡 (%)", "Start grade (%)"],
+  g1: ["终点纵坡 (%)", "End grade (%)"],
+  maxGrade: ["绝对纵坡上限 (%)", "Absolute grade cap (%)"],
+  terrainUnknown: [
+    "地形、净空、局部层数未知；负标高不自动意味着隧道。",
+    "Terrain, clearance and local levels unknown; negative elevation does not imply a tunnel.",
+  ],
+  GRADE_LIMIT: [
+    "解析峰值纵坡超过实验上限；调整接入长度或纵断面。",
+    "Analytical peak grade exceeds experimental cap; edit anchor length or profile.",
+  ],
+  peakGrade: ["解析峰值纵坡", "Analytical peak grade"],
+  profileScale: [
+    "图表横纵独立缩放，三维无高度夸张",
+    "Chart axes independently scaled; no vertical exaggeration in 3D",
+  ],
+  heightDifference: [
+    "中心线交会高差（不是最小实体净空）",
+    "Centerline crossing height difference (NOT minimum structural clearance)",
+  ],
+  migrationWarning: [
+    "旧 schema 1 没有高度数据。仅在接受后转换为两主线零标高、零坡度的平坦示意；地形和净空仍未知。",
+    "Schema 1 has no elevations. Accept only to create illustrative zero elevations/grades on both mainlines; terrain and clearance remain unknown.",
+  ],
+  acceptMigration: ["接受平坦示意并转换", "Accept illustrative flat migration"],
+  cancelMigration: ["取消导入", "Cancel import"],
+
   odState: ["OD 候选状态", "OD candidate status"],
   laneHelp: [
     "选择车道标签，在图中高亮对应计算连接（白色粗线）。",
@@ -9,14 +68,17 @@ export const messages = {
     "读取案例失败；保留原输入，请重试。",
     "Case load failed; previous input retained. Retry the load.",
   ],
-  title: ["立交实验室 · 游戏外二维 Demo", "Interchange Lab · Offline 2D demo"],
+  title: [
+    "立交实验室 · 游戏外连接预览",
+    "Interchange Lab · Offline connections",
+  ],
   intro: [
     "调整参数 → 选交会 → 检查候选 → 保存案例。单位为米；所有默认值都是实验参数。",
     "Edit parameters → choose crossing → inspect candidates → save case. Metres; defaults are experimental.",
   ],
   warning: [
-    "二维草案，不是可建造立交。结构、地面实占、净空、层数、游戏路径与交通均未知。",
-    "2D draft, not a buildable interchange. Structures, ground occupation, clearance, levels, game paths and traffic are UNKNOWN.",
+    "三维规划预览，不是可建造立交。纵坡做数学检查；结构、地面实占、净空、层数及游戏交通未知。",
+    "3D planning preview, not a buildable interchange. Grades are mathematically checked; structures, ground, clearance, levels and game traffic are UNKNOWN.",
   ],
   inputs: ["输入与硬约束", "Inputs & hard constraints"],
   example: ["案例", "Example"],
@@ -98,8 +160,8 @@ export const messages = {
   retained: ["保留", "Retained"],
   net: ["净变化", "Net change"],
   unknown: [
-    "完整 P/G/R、纵断面、层数、交通：UNKNOWN",
-    "Complete P/G/R, profile, levels, traffic: UNKNOWN",
+    "完整 P/G/R、净空、层数、交通：UNKNOWN",
+    "Complete P/G/R, clearance, levels, traffic: UNKNOWN",
   ],
   approx: [
     "曲线采样有误差；集合运算针对采样多边形。完整面积误差界未知，不能视作准确结构包络。",

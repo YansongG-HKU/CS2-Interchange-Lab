@@ -4,9 +4,10 @@ See [runtime and support domain](OFFLINE_DEMO.md). Requirements base: `bfccebe74
 
 ## Actual evidence / 实测证据
 
-- [Unit/property/regression output](../evidence/unit-tests.txt): 23 assertions grouped as Node tests, including degeneracy, limits, fixed OD, G1, unions/differences, area/overflow, rotation, reload and unavailable adapter.
+- [Unit/property/regression output](../evidence/unit-tests.txt): 37 assertions grouped as Node tests, including degeneracy, limits, fixed OD, G1, unions/differences, area/overflow, rotation, reload and unavailable adapter.
 - [Real browser record](../evidence/browser.json): 81 Chromium interaction assertions, Chinese/English, geometry-invariant locale switch, fractional input, undo, preset, JSON download/import, second intersection selection, near tangent, area cap, overflow, error location, malformed/null JSON, empty numeric input, recovery and narrow layout.
 - [Fixture computations](../evidence/computation.json): complete inputs, expected and observed statuses, candidate diagnostics, OD, area, timings and 128/256 refinement differences. These timings are this machine's observations, not a responsiveness guarantee.
+- [3D browser record](../evidence/browser3d.json): real WebGL2 rendered pixels, mouse orbit/pan/wheel, camera reset/top, complete OD highlight, full/partial redraw, height/grade inputs, selected profile, schema 2 reload, explicit legacy migration, invalid-input scene clearing, 390px controls and renderer fallback.
 - [Build output](../evidence/build.txt): production build; examples copied into distribution.
 - Screenshots: [中文](../evidence/browser-zh.png), [English overflow](../evidence/browser-overflow-en.png), [narrow English](../evidence/browser-mobile-en.png), [窄屏中文](../evidence/browser-mobile-zh.png).
 - [Export/reload fixture](../evidence/exported-case.json).
@@ -31,7 +32,7 @@ These are **partial offline subcases**, not acceptance of the full A01–A40 sui
 
 CI: no workflow has been added or executed by this change. Local `npm test`, browser and build success is **not CI success**. / 没有把本地测试冒称 CI 通过。
 
-## Review regression / 审查回归
+## Historical schema 1 review regression / schema 1 历史审查回归
 
 Added own-key schema regression (`constructor`, `toString`, `__proto__`, `hasOwnProperty`, ordinary extra key), plus real JSON file import rejection and unchanged previous input/result in both locales. This is a validation bug fix, not evidence of code execution/prototype pollution.
 
@@ -41,4 +42,14 @@ Playwright intercepts actual fixture fetches and deliberately releases older res
 
 验证：22 项核心测试、78 项真实浏览器断言、7 案例预期/实测检查、生产构建；完整游戏与 CI 仍 NOT_RUN。输入、支持域和计算几何不扩大。
 
-Final boundary regression: anchor=300m makes candidate d1 fail ANCHOR_RANGE; its lane experiment is NOT_RUN, has no connector geometry, and displays 未运行 / NOT_RUN in both languages. Final totals: 23 core tests, 81 browser assertions; seven fixtures and build pass. / 前置条件失败不是 UNKNOWN 检查完成。
+Historical schema 1 boundary regression: anchor=300m makes candidate d1 fail ANCHOR_RANGE; its lane experiment is NOT_RUN, has no connector geometry, and displays 未运行 / NOT_RUN in both languages. At that schema 1 revision: 23 core tests, 81 browser assertions; seven fixtures and build pass. / 前置条件失败不是 UNKNOWN 检查完成。
+
+## Schema 2 / Three-dimensional V1 evidence
+
+Current test suite: 37 core tests (23 preserved planar and 14 new vertical/preview), 81 preserved browser assertions, plus 37 separately recorded 3D browser assertions. Eight fixture records include the original seven planar cases migrated explicitly to flat schema 2 data plus `elevated-full`. The Hermite 0→12m/200m benchmark records peak 9% at 100m, and equal-height overshoot records min/max rather than clamping.
+
+Actual rendered screenshots: [orbit and full connection zh](../evidence/three-orbit-zh.png), [selected profile en](../evidence/three-profile-en.png), [height-edited oblique scene](../evidence/three-height-en.png), [invalid red candidates/top en](../evidence/three-invalid-top-en.png), [mobile 3D en](../evidence/three-mobile-en.png), [initial elevated scene](../evidence/three-initial.png). These are browser captures, not generated illustrations. Camera gestures and rendered-pixel changes are asserted; no real-device touch or game equivalence is claimed.
+
+The existing browser regression now explicitly selects the 2D view and targets its JSON disclosure by ID, since the new profile panel adds a second disclosure. Early 3D test correction: road-kind metadata was added to the read-only scene probe so invalid-ramp assertions can distinguish ramps from mainlines; visual geometry already retained its invalid flag. Final pass counts are recorded by the test scripts, not inferred from screenshots.
+
+Height/terrain caps, structural clearance, local stacked decks, full structure/ground area and all CS2/Mod checks remain UNKNOWN/NOT_RUN. Mathematical profile checks do not change that boundary. No CI workflow introduced.

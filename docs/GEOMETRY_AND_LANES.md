@@ -52,3 +52,7 @@ OD验证限定选中立交影响区内的合法路径；经外部城市路口绕
 
 ## 曲线与用地联合约束
 按 [场地优化契约](CURVED_SITE_OPTIMIZATION.md) 同时处理接入弧长、局部交角、完整结构包络与地块形状。曲线数学可接不等于包络装得下；多层投影不重复算占地，坡道沿程标高不累计成多个层。
+
+## 有界三维与纵断面扩展 / Bounded 3D/profile extension
+
+[纵断面 V1](VERTICAL_PROFILES.md) 和 [三维连接预览](THREE_D_DESIGN.md) 记录 schema 2、共享标高基准、独立 Hermite 高程/坡度、偏移接入度量校正、解析极值、完整端口 OD 高亮及真实浏览器测试。平面面积集合口径和独立六车道实验范围不变；不以中心线高差代替净空，地形/结构/层数与游戏兼容仍未知。 / New bounded profile/preview implementation does not establish structural clearance, terrain or game compatibility. Exact inputs, source hashes, screenshots and test outputs remain in [offline evidence](OFFLINE_VALIDATION.md).
