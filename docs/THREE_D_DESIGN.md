@@ -18,3 +18,5 @@ Official references read: [OrbitControls](https://threejs.org/docs/pages/OrbitCo
 Measured tests and actual screenshots are indexed in [OFFLINE_VALIDATION](OFFLINE_VALIDATION.md). No camera permission or external GPU service; local Chromium WebGL2 was exercised. DOM stays readable at 390px; touch controls use OrbitControls, while automated gesture evidence is mouse and explicit zoom buttons, not a claim of physical-device touch testing.
 
 Build tradeoff: Three.js increases the production JavaScript chunk beyond Vite's default 500kB warning threshold. This is recorded as a bundle-size warning, not a build failure or a claim of arbitrary-device performance; no texture/model assets or paid services are fetched at runtime.
+
+Diagnostic navigation follows the active view: located errors pan the 3D camera and add the existing issue marker in three mode; plan mode retains its SVG marker and scroll target. Profile mode scrolls the existing profile panel without claiming diagnostic-to-profile selection. Diagnostics without coordinates do not invent a camera target. / 诊断按当前视图定位；无位置的错误不伪造空间目标。

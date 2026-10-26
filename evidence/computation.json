@@ -1,7 +1,7 @@
 {
   "version": "offline-0.2.0",
   "node": "v24.19.0",
-  "date": "2026-10-25T20:42:52.484Z",
+  "date": "2026-10-26T01:40:10.690Z",
   "requirementsHead": "bfccebe7467b2a8935306910b7763957ec98c207",
   "records": [
     {
@@ -123,7 +123,7 @@
       "expected": "NO_CANDIDATE_FOUND",
       "actual": "NO_CANDIDATE_FOUND",
       "pass": true,
-      "elapsedMs": 353.841068,
+      "elapsedMs": 324.605885,
       "crossings": [
         {
           "p": [
@@ -2626,7 +2626,7 @@
       "expected": "UNKNOWN",
       "actual": "UNKNOWN",
       "pass": true,
-      "elapsedMs": 67.13548599999996,
+      "elapsedMs": 83.28255800000005,
       "crossings": [
         {
           "p": [
@@ -3510,7 +3510,7 @@
       "expected": "INPUT_INVALID",
       "actual": "INPUT_INVALID",
       "pass": true,
-      "elapsedMs": 7.163908000000049,
+      "elapsedMs": 5.168035999999972,
       "crossings": [
         {
           "p": [
@@ -3673,7 +3673,7 @@
       "expected": "UNSUPPORTED",
       "actual": "UNSUPPORTED",
       "pass": true,
-      "elapsedMs": 7.5343899999999735,
+      "elapsedMs": 6.0557529999999815,
       "crossings": [
         {
           "p": [
@@ -3818,7 +3818,7 @@
       "expected": "NO_CANDIDATE_FOUND",
       "actual": "NO_CANDIDATE_FOUND",
       "pass": true,
-      "elapsedMs": 236.78628099999997,
+      "elapsedMs": 245.57241200000004,
       "crossings": [
         {
           "p": [
@@ -6381,7 +6381,7 @@
       "expected": "NO_CANDIDATE_FOUND",
       "actual": "NO_CANDIDATE_FOUND",
       "pass": true,
-      "elapsedMs": 312.071546,
+      "elapsedMs": 310.40551300000004,
       "crossings": [
         {
           "p": [
@@ -8921,7 +8921,7 @@
       "expected": "UNSUPPORTED",
       "actual": "UNSUPPORTED",
       "pass": true,
-      "elapsedMs": 0.6002539999999499,
+      "elapsedMs": 1.370975000000044,
       "crossings": [],
       "diagnostics": [
         {
@@ -9050,7 +9050,7 @@
       "expected": "UNKNOWN",
       "actual": "UNKNOWN",
       "pass": true,
-      "elapsedMs": 224.62296700000002,
+      "elapsedMs": 207.49199799999997,
       "crossings": [
         {
           "p": [

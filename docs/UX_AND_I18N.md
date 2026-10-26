@@ -67,3 +67,5 @@
 离线审查修复：六车道使用响应式标签选择对应曲线，中文/英文及窄屏实测；旧异步加载不能覆盖新的选择/重置/编辑/语言意图。OD 与独立车道实验分别显示状态。 / Offline labels are responsive/selectable; stale loads cannot overwrite newer intent; OD and lane experiments report separate states. See [validation](OFFLINE_VALIDATION.md).
 
 Schema 2 UI adds bilingual height/grade controls, orbit/pan/zoom/reset/top, complete OD highlighting, selected longitudinal profile and explicit schema 1 flat-assumption migration. Invalid ramps remain visible; mathematical/structural/game status stays separate. / 详见 [三维契约](THREE_D_DESIGN.md) 与 [纵断面](VERTICAL_PROFILES.md)。
+
+诊断定位修复：三维模式下有位置的诊断移动相机到问题 XY；二维模式保留原标记和滚动行为。纵断面模式仅滚动当前纵断面面板，不声称自动选中了对应匝道。 / Located diagnostics focus the active 3D scene or existing plan marker; profile mode scrolls its panel.

@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-25T20:41:08.656Z",
-  "sourceCommit": "96a6f6762a2a991fd7e158c26d12c4ca8548c854",
+  "date": "2026-10-26T01:40:52.745Z",
+  "sourceCommit": "49dd44d53bcc41b9e4c6988eda1b24d3c4d89a85",
   "workingTree": "implementation under test; final source hash in manifest",
   "browser": "154.0.8037.57",
   "checks": [

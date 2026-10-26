@@ -53,3 +53,7 @@ Actual rendered screenshots: [orbit and full connection zh](../evidence/three-or
 The existing browser regression now explicitly selects the 2D view and targets its JSON disclosure by ID, since the new profile panel adds a second disclosure. Early 3D test correction: road-kind metadata was added to the read-only scene probe so invalid-ramp assertions can distinguish ramps from mainlines; visual geometry already retained its invalid flag. Final pass counts are recorded by the test scripts, not inferred from screenshots.
 
 Height/terrain caps, structural clearance, local stacked decks, full structure/ground area and all CS2/Mod checks remain UNKNOWN/NOT_RUN. Mathematical profile checks do not change that boundary. No CI workflow introduced.
+
+## Diagnostic navigation regression (2026-10-26 UTC)
+
+`node tests/diagnostic-focus.js` runs 13 real Chromium assertions on elevated-full with B.z0=80m, candidate d1: click a located ramp GRADE_LIMIT in Chinese and English, verify the camera actually moves and target XY equals the diagnostic; switch to plan, verify the existing SVG marker matches the same point and camera remains unchanged. Inputs, selected diagnostic, expected/actual assertions, browser and parent version are in [diagnostic-focus.json](../evidence/diagnostic-focus.json). Original 37 core, 81 planar browser, 37 3D browser checks, eight fixtures and build were rerun; CI/game remain NOT_RUN. Source manifest includes this targeted regression. No new screenshot is needed for the behavioral fix; actual camera/marker coordinates are recorded.

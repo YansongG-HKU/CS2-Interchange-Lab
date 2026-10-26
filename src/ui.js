@@ -228,7 +228,14 @@ function bind(c) {
       (e.onclick = () => {
         focus = diags[Number(e.dataset.diag)].point ?? null;
         render();
-        $("plan").scrollIntoView({ block: "center" });
+        if (viewMode === "three") {
+          if (focus) scene?.focusIssue(focus);
+          $("three-panel").scrollIntoView({ block: "center" });
+        } else if (viewMode === "plan") {
+          $("plan").scrollIntoView({ block: "center" });
+        } else {
+          $("profile-panel").scrollIntoView({ block: "center" });
+        }
       }),
   );
   document.querySelectorAll("[data-od]").forEach(
